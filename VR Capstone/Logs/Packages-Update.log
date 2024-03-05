@@ -40,3 +40,16 @@ The following packages were updated:
   com.unity.collab-proxy from version 2.0.4 to 2.0.5
   com.unity.timeline from version 1.7.4 to 1.7.5
   com.unity.xr.management from version 4.3.3 to 4.4.0
+
+=== Tue Mar  5 23:03:47 2024
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.collab-proxy from version 2.0.5 to 2.2.0
+  com.unity.render-pipelines.universal from version 14.0.8 to 14.0.10
+  com.unity.timeline from version 1.7.5 to 1.7.6
+  com.unity.visualscripting from version 1.8.0 to 1.9.1
+  com.unity.xr.interaction.toolkit from version 2.4.3 to 2.5.2
+  com.unity.xr.openxr from version 1.8.2 to 1.10.0
