@@ -24,6 +24,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Typhoon_Scene.unity
     guid: 0ef17415168d5fe42bc23a8e0f8a60d9
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 582309ff39cfc0f4da5c3968a7125090,
+      type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3ab5c3b252a4f224f8d0d2c07a89e384,
       type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: b42d24df54c819540a50d3fe8c9c45ee,
