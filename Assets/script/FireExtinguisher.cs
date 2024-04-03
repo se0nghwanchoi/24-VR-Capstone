@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class FireExtinguisher : MonoBehaviour
 {
-    public XRGrabInteractable grabInteractable; // 참조할 XRGrabInteractable
+    public XRSimpleInteractable simpleInteractable; // 참조할 XRGrabInteractable
     public Animator animFire;
     public Transform particle;
     public Transform createPoint;
@@ -18,12 +18,12 @@ public class FireExtinguisher : MonoBehaviour
 
     void OnEnable()
     {
-        grabInteractable.selectEntered.AddListener(HandleSelectEntered);
+        simpleInteractable.selectEntered.AddListener(HandleSelectEntered);
     }
 
     void OnDisable()
     {
-        grabInteractable.selectEntered.RemoveListener(HandleSelectEntered);
+        simpleInteractable.selectEntered.RemoveListener(HandleSelectEntered);
     }
 
     private void HandleSelectEntered(SelectEnterEventArgs arg)
