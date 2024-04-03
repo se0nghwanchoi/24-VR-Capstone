@@ -31,7 +31,7 @@ public class FireExtinguisher : MonoBehaviour
         animFire.SetBool("Push_Btn", true);
 
          // 파티클 생성
-        Instantiate(particle, createPoint.position, createPoint.rotation);
+        Instantiate(particle, createPoint.position, createPoint.rotation, createPoint);
             
         
     }
