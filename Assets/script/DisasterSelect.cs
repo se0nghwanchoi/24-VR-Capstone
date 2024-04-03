@@ -18,8 +18,9 @@ public class DisasterSelect : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("disaster", disaster);
+        string postURL = url + "?" + form;
 
-        using (UnityWebRequest www = UnityWebRequest.Post(url, form))
+        using (UnityWebRequest www = UnityWebRequest.Post(postURL, form))
         {
             yield return www.SendWebRequest();
 
