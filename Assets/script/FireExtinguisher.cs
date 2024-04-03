@@ -5,11 +5,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class FireExtinguisher : MonoBehaviour
 {
-
     public XRGrabInteractable grabInteractable; // ÂüÁ¶ÇÒ XRGrabInteractable
     public Animator animFire;
     public Transform particle;
     public Transform createPoint;
+    
+    
       
           
     void OnEnable()
@@ -25,7 +26,8 @@ public class FireExtinguisher : MonoBehaviour
     private void HandleSelectEntered(SelectEnterEventArgs arg)
     {
         animFire.SetBool("Push_Btn", true);
-        Instantiate(particle, createPoint.position, createPoint.rotation);
+        
+        Instantiate(particle, createPoint.position, createPoint.rotation, createPoint);
         
     }
 
