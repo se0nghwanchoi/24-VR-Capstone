@@ -23,7 +23,7 @@ public class DisasterSelect : MonoBehaviour
         string studentID = IDmanager.Instance.StudentID;
 
         WWWForm form = new WWWForm();
-        form.AddField("disaaster", disaster);
+        form.AddField("disaster", disaster);
         form.AddField("ID", studentID);
 
         string url = "";

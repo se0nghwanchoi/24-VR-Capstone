@@ -5,19 +5,22 @@ using UnityEngine.Networking;
 
 public class ConnectLocal : MonoBehaviour
 {
-    private string url = "http://localhost/Capstone24/test.php";
+    private string url = "http://localhost/Capstone24/recordSelection.php";
 
     // 게임이 시작할 때 호출됩니다.
     void Start()
     {
-        StartCoroutine(PostRequest(url, "1971383"));
+        StartCoroutine(PostRequest(url));
     }
 
     // 데이터베이스에서 데이터를 가져오는 코루틴
-    IEnumerator PostRequest(string url, string dataToSend)
+    IEnumerator PostRequest(string url)
     {
+        string studentID = "1971383";
+        string disaster = "fire";
         WWWForm form = new WWWForm();
-        form.AddField("data", dataToSend);
+        form.AddField("ID", studentID);
+        form.AddField("disaster", disaster);
         using(UnityWebRequest www = UnityWebRequest.Post(url, form))
         {
             yield return www.SendWebRequest();
