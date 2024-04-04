@@ -9,7 +9,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class BreakableWindow : MonoBehaviour
 {
 
-    public XRSimpleInteractable simpleInteractable; // 참조할 XRGrabInteractable
+    public XRSimpleInteractable simpleInteractable; // 참조할 XR
     [Tooltip("Layer should be TransparentFX or your own layer for breakable windows.")]
     public LayerMask layer;
     [Range(2, 25)]
@@ -268,6 +268,5 @@ public class BreakableWindow : MonoBehaviour
     {
 
         breakWindow();
-
     }
 }

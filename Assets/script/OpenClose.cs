@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class OpenClose : MonoBehaviour
 {
-    public XRSimpleInteractable simpleInteractable; // 참조할 XRGrabInteractable
+    public XRSimpleInteractable simpleInteractable; // 참조할 XR
     public Animator openandclose;
     public bool open;
 

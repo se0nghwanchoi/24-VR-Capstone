@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class FireExtinguisher : MonoBehaviour
 {
-    public XRSimpleInteractable simpleInteractable; // 참조할 XRGrabInteractable
+    public XRSimpleInteractable simpleInteractable; // 참조할 XRInteractable
     public Animator animFire;
     public Transform particlePrefab; // 프리팹으로 변경
     public Transform createPoint;
