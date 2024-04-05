@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IDmanager : MonoBehaviour
 {
-    public static IDmanager Instance;
+    public static IDmanager Instance { get; private set; }
     public string StudentID;
 
     private void Awake()
