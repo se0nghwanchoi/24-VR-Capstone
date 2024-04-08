@@ -28,10 +28,12 @@ public class TriggerEventController : MonoBehaviour
 
     IEnumerator PlayAudioAndShowArrow()
     {
-        Debug.Log("Playing audio clip."); // 오디오 재생 로그
+
+
+        Debug.Log("오디오 재생"); // 오디오 재생 로그
         audioSource.PlayOneShot(arrivalClip); // 안내 방송 재생
         yield return new WaitForSeconds(arrivalClip.length); // 오디오 클립 길이만큼 대기
-        Debug.Log("Showing arrow."); // 화살표 활성화 로그
+        Debug.Log("화살표 활성화"); // 화살표 활성화 로그
         arrow.SetActive(true); // 화살표 활성화
         yield return new WaitForSeconds(20); // 20초 동안 대기
         arrow.SetActive(false); // 화살표 비활성화
