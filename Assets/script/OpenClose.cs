@@ -43,7 +43,7 @@ public class OpenClose : MonoBehaviour
         
         IEnumerator opening()
     {
-        print("you are opening the door");
+        
         openandclose.Play("Opening");
         open = true;
         yield return new WaitForSeconds(.5f);
@@ -51,7 +51,7 @@ public class OpenClose : MonoBehaviour
 
     IEnumerator closing()
     {
-        print("you are closing the door");
+        
         openandclose.Play("Closing");
         open = false;
         yield return new WaitForSeconds(.5f);
