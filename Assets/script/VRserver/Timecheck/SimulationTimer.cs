@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
+// ¼öÁ¤¿ë
+
 public class SimulationTimer : MonoBehaviour
 {
     private float SimStart;
