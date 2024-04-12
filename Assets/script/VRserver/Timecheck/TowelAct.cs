@@ -1,26 +1,27 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class TowelAct : MonoBehaviour
 {
-    private InteractionTimer Interac_Time;
+    private InteractionTimer interactionTimer;
 
-    private void Start()
+    private void Awake()
     {
-        Interac_Time = GetComponent<InteractionTimer>();
-        if (Interac_Time == null)
+        interactionTimer = GetComponent<InteractionTimer>();
+        if (interactionTimer == null)
         {
-            Debug.LogError("상호작용 오류 ! ");
+            Debug.LogError("InteractionTimer component is missing on this object!");
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) // 'Player'는 플레이어 오브젝트의 Tag입니다.
+        if (other.CompareTag("Player"))
         {
-            Interac_Time.StartInteraction();
+            Debug.Log("Interaction with player started.");
+            interactionTimer.StartInteraction();
         }
     }
 
@@ -28,15 +29,16 @@ public class TowelAct : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Interac_Time.EndInteraction();
-            float totalInteractionTime = Interac_Time.GetTotalInteractionTime();
-            Debug.Log("Total Interaction Time with Handkerchief: " + totalInteractionTime);
-            StartCoroutine(Towelinteracts(totalInteractionTime));
+            interactionTimer.EndInteraction();
+            float totalInteractionTime = interactionTimer.GetTotalInteractionTime();
+            Debug.Log($"Total Interaction Time with Towel: {totalInteractionTime}");
+            StartCoroutine(TowelInteracts(totalInteractionTime));
         }
     }
-    private IEnumerator Towelinteracts(float interactionTime)
+
+    private IEnumerator TowelInteracts(float interactionTime)
     {
-        int recordID = PlayerPrefs.GetInt("RecordID"); // PlayerPrefs에서 recordID를 가져옴
+        int recordID = PlayerPrefs.GetInt("RecordID");
         WWWForm form = new WWWForm();
         form.AddField("recordID", recordID);
         form.AddField("doCode", 1);
@@ -48,7 +50,7 @@ public class TowelAct : MonoBehaviour
 
             if (www.result != UnityWebRequest.Result.Success)
             {
-                Debug.LogError("Error while sending interaction time: " + www.error);
+                Debug.LogError($"Error while sending interaction time: {www.error}");
             }
             else
             {
