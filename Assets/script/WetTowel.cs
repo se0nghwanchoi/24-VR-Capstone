@@ -5,8 +5,9 @@ using UnityEngine;
 public class WetTowel : MonoBehaviour
 {
     public AudioClip broadcast; // 안내 방송 오디오 클립
-    private AudioSource audioSource; // AudioSource 컴포넌트
     public Material blueMaterial; // 파란색 머티리얼을 지정할 public 변수 추가
+    public GameObject fourthStep; // FourthStep 게임 오브젝트 추가
+    private AudioSource audioSource; // AudioSource 컴포넌트
 
     void Start()
     {
@@ -25,6 +26,9 @@ public class WetTowel : MonoBehaviour
 
             // 수건의 머티리얼을 파란색으로 변경
             GetComponent<Renderer>().material = blueMaterial;
+
+            // FourthStep 활성화
+            fourthStep.SetActive(true);
 
             // 2초 뒤에 오디오 재생
             if (audioSource != null && broadcast != null)
