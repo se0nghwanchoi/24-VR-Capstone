@@ -35,9 +35,20 @@ public class DisasterSelect : MonoBehaviour
             }
             else
             {
-                Debug.Log("Disaster and ID record: " + disaster + "," + studentID);
+                string jsonResponse = www.downloadHandler.text;
+                var data = JsonUtility.FromJson<RecordID>(jsonResponse);
+                int recordID = data.recordID;
+
+                // PlayerPrefs를 사용하여 recordID 저장
+                PlayerPrefs.SetInt("RecordID", recordID);
+                PlayerPrefs.Save();
             }
         }
     }
     
+}
+[System.Serializable]
+public class RecordID
+{
+    public int recordID;
 }
