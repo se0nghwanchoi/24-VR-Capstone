@@ -12,6 +12,14 @@ public class SimulationTimer : MonoBehaviour
     {
         StartSimulation();
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)) // 예를 들어, Esc 키를 누르면 종료
+        {
+            EndSimulation();
+        }
+
+    }
     // 시뮬레이션 시작 시 호출
     public void StartSimulation()
     {
@@ -43,6 +51,7 @@ public class SimulationTimer : MonoBehaviour
         StartCoroutine(PostClearTime(Sim_clear));
     }
 
+   
     private IEnumerator PostClearTime(float Sim_clear)
     {
         int recordID = PlayerPrefs.GetInt("RecordID");
