@@ -24,6 +24,7 @@ public class InteractionTimer : MonoBehaviour
         {
             startTime = Time.time;
             Interac = true;
+            Debug.Log("Interaction started at: " + startTime);
         }
     }
 
@@ -34,9 +35,9 @@ public class InteractionTimer : MonoBehaviour
         {
             Interac = false;
             float endTime = Time.time;
-            float interactionDuration = endTime - startTime;
-            Interac_alltime += interactionDuration;
-            Debug.Log("Interaction ended. Total interaction time: " + Interac_alltime + " seconds.");
+            float allinterac = endTime - startTime;
+            Interac_alltime += allinterac;
+            Debug.Log("Interaction ended at: " + endTime + ". Duration: " + allinterac);
         }
     }
 
