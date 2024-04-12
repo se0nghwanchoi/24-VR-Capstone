@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &938270297273053183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 454502311171126597}
+  - component: {fileID: 3594273707901450976}
+  - component: {fileID: 1586845611232923178}
+  - component: {fileID: 4148043753671317831}
+  m_Layer: 0
+  m_Name: RoofBuilding01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &454502311171126597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938270297273053183}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7652874299264687637}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!33 &3594273707901450976
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938270297273053183}
+  m_Mesh: {fileID: -6822743215722982414, guid: 39fe5334fbd30c242b56911f3334cc6c, type: 3}
+--- !u!23 &1586845611232923178
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938270297273053183}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 760281153af1bbe4ca9f7d0c391cc44a, type: 2}
+  - {fileID: 2100000, guid: 8fa7012b15801164ca62fe73170cc088, type: 2}
+  - {fileID: 2100000, guid: de653df5b96f0294fb7522732d534ada, type: 2}
+  - {fileID: 2100000, guid: 9ee581e36b1625948bc84bcc198e11c4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &4148043753671317831
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938270297273053183}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6822743215722982414, guid: 39fe5334fbd30c242b56911f3334cc6c, type: 3}
+--- !u!1001 &4110687988152504963
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 454502311171126597}
+    m_Modifications:
+    - target: {fileID: 5996648812404853910, guid: 76f7932f9cc20054f932b7928b062d6a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996648812404853910, guid: 76f7932f9cc20054f932b7928b062d6a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5635448
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996648812404853910, guid: 76f7932f9cc20054f932b7928b062d6a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.04834938
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996648812404853910, guid: 76f7932f9cc20054f932b7928b062d6a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.9898956
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996648812404853910, guid: 76f7932f9cc20054f932b7928b062d6a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996648812404853910, guid: 76f7932f9cc20054f932b7928b062d6a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996648812404853910, guid: 76f7932f9cc20054f932b7928b062d6a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996648812404853910, guid: 76f7932f9cc20054f932b7928b062d6a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996648812404853910, guid: 76f7932f9cc20054f932b7928b062d6a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996648812404853910, guid: 76f7932f9cc20054f932b7928b062d6a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996648812404853910, guid: 76f7932f9cc20054f932b7928b062d6a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421079368054222938, guid: 76f7932f9cc20054f932b7928b062d6a,
+        type: 3}
+      propertyPath: m_Name
+      value: RoofBuildingDoor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 76f7932f9cc20054f932b7928b062d6a, type: 3}
+--- !u!4 &7652874299264687637 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5996648812404853910, guid: 76f7932f9cc20054f932b7928b062d6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4110687988152504963}
+  m_PrefabAsset: {fileID: 0}
