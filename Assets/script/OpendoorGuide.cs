@@ -16,6 +16,7 @@ public class OpendoorGuide : MonoBehaviour
     void Start()
     {
         open = false;
+        audioSource = GetComponent<AudioSource>(); // AudioSource 컴포넌트를 가져옴
     }
 
     void OnEnable()
@@ -30,39 +31,33 @@ public class OpendoorGuide : MonoBehaviour
 
     private void HandleSelectEntered(SelectEnterEventArgs arg)
     {
-        if (open == false)
+        if (!open)
         {
             StartCoroutine(opening());
-            
         }
         else
         {
-            if (open == true)
-            {
-                StartCoroutine(closing());
-            }
-
+            StartCoroutine(closing());
         }
     }
 
     IEnumerator opening()
     {
-        
         openandclose.Play("Opening");
         open = true;
         audioSource.clip = broadcast;
         audioSource.Play();
-        Invoke("ShowArrow", broadcast.length); // 방송 길이 후 화살표 표시
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(broadcast.length); // 오디오 재생이 끝날 때까지 기다림
+        ShowArrow();
     }
 
     IEnumerator closing()
     {
-        
         openandclose.Play("Closing");
         open = false;
         yield return new WaitForSeconds(.5f);
     }
+
     void ShowArrow()
     {
         arrow.SetActive(true);
@@ -73,6 +68,4 @@ public class OpendoorGuide : MonoBehaviour
     {
         arrow.SetActive(false);
     }
-
-
 }
