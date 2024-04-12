@@ -6,34 +6,41 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class TowelAct : MonoBehaviour
 {
     private InteractionTimer interactionTimer;
+    private XRGrabInteractable grabInteractable;
 
     private void Awake()
     {
         interactionTimer = GetComponent<InteractionTimer>();
-        if (interactionTimer == null)
+        grabInteractable = GetComponent<XRGrabInteractable>();
+
+        if (interactionTimer == null || grabInteractable == null)
         {
-            Debug.LogError("InteractionTimer component is missing on this object!");
+            Debug.LogError("필수 컴포넌트가 누락되었습니다!");
+            return;
         }
+
+        grabInteractable.selectEntered.AddListener(StartInteraction);
+        grabInteractable.selectExited.AddListener(EndInteraction);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnDestroy()
     {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Interaction with player started.");
-            interactionTimer.StartInteraction();
-        }
+        grabInteractable.selectEntered.RemoveListener(StartInteraction);
+        grabInteractable.selectExited.RemoveListener(EndInteraction);
     }
 
-    private void OnTriggerExit(Collider other)
+    private void StartInteraction(SelectEnterEventArgs args)
     {
-        if (other.CompareTag("Player"))
-        {
-            interactionTimer.EndInteraction();
-            float totalInteractionTime = interactionTimer.GetTotalInteractionTime();
-            Debug.Log($"Total Interaction Time with Towel: {totalInteractionTime}");
-            StartCoroutine(TowelInteracts(totalInteractionTime));
-        }
+        Debug.Log("상호작용 시작");
+        interactionTimer.StartInteraction();
+    }
+
+    private void EndInteraction(SelectExitEventArgs args)
+    {
+        interactionTimer.EndInteraction();
+        float totalInteractionTime = interactionTimer.GetTotalInteractionTime();
+        Debug.Log($"Total Interaction Time with Towel: {totalInteractionTime}");
+        StartCoroutine(TowelInteracts(totalInteractionTime));
     }
 
     private IEnumerator TowelInteracts(float interactionTime)
