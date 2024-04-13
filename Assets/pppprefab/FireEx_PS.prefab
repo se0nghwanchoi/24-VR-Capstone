@@ -4945,6 +4945,8 @@ MonoBehaviour:
   Explosion: {fileID: 1338017871918850, guid: b93e4ddba4baebf47b7fb121d99b4a1e, type: 3}
   Firepos1: {fileID: 0}
   SecondFire: {fileID: 0}
+  ThirdStep: {fileID: 0}
+  broadcast: {fileID: 8300000, guid: f8b6573f5fb310343b7b564962183b8c, type: 3}
 --- !u!1 &1215077094847765793
 GameObject:
   m_ObjectHideFlags: 0
