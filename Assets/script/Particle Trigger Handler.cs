@@ -20,6 +20,7 @@ public class ParticleTriggerHandler : MonoBehaviour
     {
         if (!hasExploded)
         {
+            Debug.Log("확인");
             Invoke("ExplodeAndActivateSecondFire", 1.5f); // 1.5초 후에 폭발 생성 및 SecondFire 활성화 예약
             PlayAudioAndActivateThirdStep();
             hasExploded = true; // 폭발한 후에는 다시 폭발하지 않도록 설정
