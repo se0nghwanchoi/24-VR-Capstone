@@ -565,6 +565,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: towel
       objectReference: {fileID: 0}
+    - target: {fileID: 8098514134918631232, guid: 56e6980df36180346b5dacd0e5ab51c7,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8247945616651811391, guid: 56e6980df36180346b5dacd0e5ab51c7,
         type: 3}
       propertyPath: m_LocalPosition.x
