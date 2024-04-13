@@ -7,7 +7,15 @@ public class TowelAct : MonoBehaviour
 {
     private InteractionTimer interactionTimer;
     private XRGrabInteractable grabInteractable;
+    private float totalInteractionTime = 0;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)) // 예를 들어, Esc 키를 누르면 종료
+        {
+            StartCoroutine(TowelInteracts(totalInteractionTime));
+        }
+    }
     private void Awake()
     {
         interactionTimer = GetComponent<InteractionTimer>();
@@ -38,9 +46,9 @@ public class TowelAct : MonoBehaviour
     private void EndInteraction(SelectExitEventArgs args)
     {
         interactionTimer.EndInteraction();
-        float totalInteractionTime = interactionTimer.GetTotalInteractionTime();
+        totalInteractionTime = interactionTimer.GetTotalInteractionTime();
         Debug.Log($"Total Interaction Time with Towel: {totalInteractionTime}");
-        StartCoroutine(TowelInteracts(totalInteractionTime));
+        //StartCoroutine(TowelInteracts(totalInteractionTime));
     }
 
     private IEnumerator TowelInteracts(float interactionTime)
