@@ -10,7 +10,13 @@ public class AudioFinished : MonoBehaviour
     void Start()
     {
         arrow.SetActive(false); // 시작 시 화살표 비활성화
-        StartCoroutine(WaitForAudioEnd());
+        Invoke("StartAudioCheck", 15f); // 15초 후 StartAudioCheck 메소드를 호출하여 오디오 재생
+    }
+
+    void StartAudioCheck()
+    {
+        audioSource.Play(); // 오디오 재생 시작
+        StartCoroutine(WaitForAudioEnd()); // 오디오가 끝나기를 기다리는 코루틴 시작
     }
 
     IEnumerator WaitForAudioEnd()
