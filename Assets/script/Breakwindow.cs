@@ -18,6 +18,7 @@ public class Breakwindow : MonoBehaviour
     {
         // AudioSource 컴포넌트를 게임 오브젝트에 추가하고 참조합니다.
         audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.loop = true; // 소리를 반복 재생하도록 설정 [변경됨: 무한 반복 재생을 위해 loop 속성을 true로 설정]
     }
 
     void OnEnable()
@@ -38,7 +39,7 @@ public class Breakwindow : MonoBehaviour
         fourthStep.SetActive(false);
 
         // 비상벨 소리 재생
-        if (emergencySound != null)
+        if (emergencySound != null && !audioSource.isPlaying) // [변경됨: audioSource.isPlaying을 체크하여 이미 재생 중인 소리는 중복 재생되지 않도록 함]
         {
             audioSource.clip = emergencySound;
             audioSource.Play();
