@@ -22,6 +22,16 @@ public class Extinguisher : MonoBehaviour
     public void FireEx(ActivateEventArgs arg)
     {
         animFire.SetBool("Push_Btn", true);
+        //파티클 생성
         Transform particleInstance = Instantiate(particlePrefab, createPoint.position, createPoint.rotation, createPoint);
+
+        // 2초 뒤에 Push_Btn 상태를 반전시킴
+        StartCoroutine(ReversePushBtnAfterDelay());
+    }
+
+    IEnumerator ReversePushBtnAfterDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        animFire.SetBool("Push_Btn_Reverse", true);
     }
 }
