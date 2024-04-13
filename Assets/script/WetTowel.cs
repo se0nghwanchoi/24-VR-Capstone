@@ -15,11 +15,11 @@ public class WetTowel : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
     }
 
-    // 충돌이 시작되었을 때 호출됨
-    void OnCollisionEnter(Collision collision)
+    // 트리거로 충돌이 시작되었을 때 호출됨
+    void OnTriggerEnter(Collider other)
     {
         // 충돌한 물체의 태그가 "Water"인 경우에만 처리
-        if (collision.gameObject.CompareTag("Water"))
+        if (other.CompareTag("Water"))
         {
             // 디버그 로그 출력
             Debug.Log("물에 충돌했습니다!");
