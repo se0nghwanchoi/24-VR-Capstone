@@ -10,7 +10,7 @@ public class Extinguisher : MonoBehaviour
     
     public Animator animFire;
     public Transform createPoint;
-    public Transform particlePrefab; // 프리팹으로 변경
+    public GameObject particlePrefab; // 프리팹으로 변경
 
     void Start()
     {
@@ -23,7 +23,7 @@ public class Extinguisher : MonoBehaviour
     {
         animFire.SetBool("Push_Btn", true);
         //파티클 생성
-        Transform particleInstance = Instantiate(particlePrefab, createPoint.position, createPoint.rotation, createPoint);
+        Instantiate(particlePrefab, createPoint.position, createPoint.rotation, createPoint);
 
         // 2초 뒤에 Push_Btn 상태를 반전시킴
         StartCoroutine(ReversePushBtnAfterDelay());
