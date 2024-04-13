@@ -10,7 +10,7 @@ public class Extinguisher : MonoBehaviour
     
     public Animator animFire;
     public Transform createPoint;
-    public GameObject particlePrefab; // 프리팹으로 변경
+    public Transform particlePrefab; // 프리팹으로 변경
 
     void Start()
     {

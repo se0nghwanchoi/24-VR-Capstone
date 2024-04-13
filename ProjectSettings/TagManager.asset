@@ -8,6 +8,7 @@ TagManager:
   - Spray
   - Water
   - Towel
+  - FireEx
   layers:
   - Default
   - TransparentFX

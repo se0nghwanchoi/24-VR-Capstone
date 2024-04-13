@@ -13,16 +13,15 @@ public class ParticleTriggerHandler : MonoBehaviour
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>(); // AudioSource 컴포넌트를 가져옴
+        audioSource = gameObject.AddComponent<AudioSource>(); // AudioSource 컴포넌트를 동적으로 추가
     }
 
-    void OnParticleTrigger()
+    void OnTriggerEnter(Collider other)
     {
-        if (!hasExploded)
+        if (!hasExploded && other.CompareTag("FireEx"))
         {
-            Debug.Log("확인");
             Invoke("ExplodeAndActivateSecondFire", 1.5f); // 1.5초 후에 폭발 생성 및 SecondFire 활성화 예약
-            PlayAudioAndActivateThirdStep();
+            Invoke("PlayAudioAndActivateThirdStep", 1.5f); // 2초 후에 오디오 플레이 및 ThirdStep 활성화 예약
             hasExploded = true; // 폭발한 후에는 다시 폭발하지 않도록 설정
         }
     }
