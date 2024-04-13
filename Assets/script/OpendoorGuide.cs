@@ -17,7 +17,7 @@ public class OpendoorGuide : MonoBehaviour
     void Start()
     {
         open = false;
-        audioSource = GetComponent<AudioSource>(); // AudioSource ÄÄÆ÷³ÍÆ®¸¦ °¡Á®¿È
+        audioSource =gameObject.AddComponent<AudioSource>(); // AudioSource ÄÄÆ÷³ÍÆ®¸¦ °¡Á®¿È
     }
 
     void OnEnable()

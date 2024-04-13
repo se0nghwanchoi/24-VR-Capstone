@@ -102,7 +102,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -122,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   broadcast: {fileID: 8300000, guid: 486e4fb4801511b4bb3a4cf7033baa47, type: 3}
   blueMaterial: {fileID: 2100000, guid: c4d4e9fda44c4014986235834961b27c, type: 2}
+  fourthStep: {fileID: 0}
 --- !u!54 &7744162205578988873
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -144,7 +145,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
