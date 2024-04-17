@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class GameData : MonoBehaviour
+[System.Serializable]
+public class GameData
 {
     public int recordID;
     public int Do_code;
@@ -12,12 +9,10 @@ public class GameData : MonoBehaviour
     public bool use_status;
     public string do_name;
     public string play_time;
-    
+}
 
-
-    [System.Serializable]
-    public class GameDataList
-    {
-        public GameData[] items;
-    }
+[System.Serializable]
+public class GameDataList
+{
+    public GameData[] items;
 }
