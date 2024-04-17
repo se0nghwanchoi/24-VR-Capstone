@@ -40,6 +40,7 @@ public class GameDataLoader : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
     void ProcessGameData(string jsonData)
     {
         GameDataList dataList = JsonUtility.FromJson<GameDataList>(jsonData);
@@ -55,7 +56,9 @@ public class GameDataLoader : MonoBehaviour
         }
     }
 
-
+=======
+>>>>>>> DH_db
+    // Disaster code to name helper
     string GetDisasterName(int code)
     {
         switch (code)
