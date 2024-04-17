@@ -39,8 +39,9 @@ public class DisasterSelect : MonoBehaviour
                 var data = JsonUtility.FromJson<GameData>(jsonResponse);
                 int recordID = data.recordID;
 
-                // PlayerPrefs를 사용하여 recordID 저장
+                // PlayerPrefs를 사용하여 recordID, Student ID 저장
                 PlayerPrefs.SetInt("RecordID", recordID);
+                PlayerPrefs.SetString("studentID", studentID);
                 PlayerPrefs.Save();
             }
         }
