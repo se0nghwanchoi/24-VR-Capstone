@@ -2,12 +2,12 @@
 public class GameData
 {
     public int recordID;
-    public int Do_code;
+<<<<<<< HEAD
     public int User_id;
+=======
+    public int student_id;
+>>>>>>> DH_db
     public int disaster_id;
-    public string interact_time;
-    public bool use_status;
-    public string do_name;
     public string play_time;
 }
 
