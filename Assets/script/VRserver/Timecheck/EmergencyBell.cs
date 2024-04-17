@@ -61,7 +61,7 @@ public class EmergencyBell : MonoBehaviour
         //form.AddField("interactionTime", 0);
         form.AddField("useStatus", usedStatus ? "1" : "0");
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/Capstone24/TowelActs.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/Capstone24/UnitActs.php", form))
         {
             yield return www.SendWebRequest();
 

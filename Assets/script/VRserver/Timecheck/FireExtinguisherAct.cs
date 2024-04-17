@@ -63,7 +63,7 @@ public class FireExtinguisherAct : MonoBehaviour
         form.AddField("interactionTime", interactionTime.ToString());
         form.AddField("useStatus", usedStatus ? "1" : "0");
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/Capstone24/TowelActs.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/Capstone24/UnitActs.php", form))
         {
             yield return www.SendWebRequest();
 
