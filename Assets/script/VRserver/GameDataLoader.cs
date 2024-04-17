@@ -33,16 +33,11 @@ public class GameDataLoader : MonoBehaviour
             }
             else
             {
-                ProcessGameData(webRequest.downloadHandler.text);
+                string jsonResponse = webRequest.downloadHandler.text;
+                GameData data = JsonUtility.FromJson<GameData>(jsonResponse);
+                Debug.Log(data);
             }
         }
-    }
-
-    void ProcessGameData(string jsonData)
-    {
-        GameData data = JsonUtility.FromJson<GameData>(jsonData);
-        Debug.Log(data.student_id);
-
     }
 
     // Disaster code to name helper
