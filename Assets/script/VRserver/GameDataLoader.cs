@@ -5,10 +5,6 @@ using UnityEngine.UI; // If you want to display the results on UI elements
 
 public class GameDataLoader : MonoBehaviour
 {
-    public string apiUrl = "http://localhost/Capstone24/ApiLoad.php";
-    int recordID = PlayerPrefs.GetInt("RecordID");
-    string studentID = PlayerPrefs.GetString("studentID");
-
     public Text studentIdText;
     public Text recordIdText;
     public Text disasterText;
@@ -17,11 +13,14 @@ public class GameDataLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        int recordID = PlayerPrefs.GetInt("RecordID");
         StartCoroutine(GetGameData(recordID));
     }
 
     IEnumerator GetGameData(int recordID)
     {
+        string apiUrl = "http://localhost/Capstone24/ApiLoad.php";
+
         string url = apiUrl + "?recordID=" + recordID;
         using (UnityWebRequest webRequest = UnityWebRequest.Get(url))
         {
@@ -41,17 +40,9 @@ public class GameDataLoader : MonoBehaviour
 
     void ProcessGameData(string jsonData)
     {
-        GameDataList dataList = JsonUtility.FromJson<GameDataList>(jsonData);
-        foreach (GameData data in dataList.items)
-        {
-            Debug.Log($"Record ID: {data.recordID}, Student ID: {data.User_id}, Disaster Name: {data.do_name}, Play Time: {data.play_time}");
+        GameData data = JsonUtility.FromJson<GameData>(jsonData);
+        Debug.Log(data.student_id);
 
-            // UI 업데이트
-            studentIdText.text = $"학번: {data.User_id}";
-            recordIdText.text = $"레코드 번호: {data.recordID}";
-            disasterText.text = $"선택한 재난: {GetDisasterName(data.Do_code)}";
-            playTimeText.text = $"총 Play Time: {data.play_time}";
-        }
     }
 
     // Disaster code to name helper
