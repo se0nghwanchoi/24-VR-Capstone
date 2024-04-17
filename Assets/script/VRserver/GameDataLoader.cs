@@ -47,10 +47,10 @@ public class GameDataLoader : MonoBehaviour
             Debug.Log($"Record ID: {data.recordID}, Student ID: {data.User_id}, Disaster Name: {data.do_name}, Play Time: {data.play_time}");
 
             // UI 업데이트
-            studentIdText.text = $"학번: {data.User_id}";
-            recordIdText.text = $"레코드 번호: {data.recordID}";
-            disasterText.text = $"선택한 재난: {GetDisasterName(data.Do_code)}";
-            playTimeText.text = $"총 Play Time: {data.play_time}";
+            studentIdText.text = $"학번 : {data.User_id}";
+            recordIdText.text = $"레코드 번호 : {data.recordID}";
+            disasterText.text = $"선택한 재난 : {GetDisasterName(data.Do_code)}";
+            playTimeText.text = $"총 Play Time : {data.play_time}";
         }
     }
 
