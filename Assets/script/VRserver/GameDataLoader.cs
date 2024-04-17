@@ -9,6 +9,11 @@ public class GameDataLoader : MonoBehaviour
     int recordID = PlayerPrefs.GetInt("RecordID");
     string studentID = PlayerPrefs.GetString("studentID");
 
+    public Text studentIdText;
+    public Text recordIdText;
+    public Text disasterText;
+    public Text playTimeText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,12 +41,28 @@ public class GameDataLoader : MonoBehaviour
 
     void ProcessGameData(string jsonData)
     {
-        // Parse the JSON data here and use it as needed
-        Debug.Log("Received data: " + jsonData);
+        GameDataList dataList = JsonUtility.FromJson<GameDataList>(jsonData);
+        foreach (GameData data in dataList.items)
+        {
+            Debug.Log($"Record ID: {data.recordID}, Student ID: {data.User_id}, Disaster Name: {data.do_name}, Play Time: {data.play_time}");
 
-        // Example of how to use the JSON data:
-        // You would need to define a class that matches the JSON structure and then use JsonUtility.FromJson<>
-        // MyGameData myData = JsonUtility.FromJson<MyGameData>(jsonData);
-        // Do something with the data
+            // UI 업데이트
+            studentIdText.text = $"학번: {data.User_id}";
+            recordIdText.text = $"레코드 번호: {data.recordID}";
+            disasterText.text = $"선택한 재난: {GetDisasterName(data.Do_code)}";
+            playTimeText.text = $"총 Play Time: {data.play_time}";
+        }
     }
+
+    // Disaster code to name helper
+    string GetDisasterName(int code)
+    {
+        switch (code)
+        {
+            case 1: return "불";
+            case 2: return "지진";
+            default: return "알 수 없음";
+        }
+    }
+
 }
