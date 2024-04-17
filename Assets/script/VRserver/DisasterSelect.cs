@@ -36,7 +36,7 @@ public class DisasterSelect : MonoBehaviour
             else
             {
                 string jsonResponse = www.downloadHandler.text;
-                var data = JsonUtility.FromJson<RecordID>(jsonResponse);
+                var data = JsonUtility.FromJson<GameData>(jsonResponse);
                 int recordID = data.recordID;
 
                 // PlayerPrefs를 사용하여 recordID 저장
@@ -46,9 +46,4 @@ public class DisasterSelect : MonoBehaviour
         }
     }
     
-}
-[System.Serializable]
-public class RecordID
-{
-    public int recordID;
 }
