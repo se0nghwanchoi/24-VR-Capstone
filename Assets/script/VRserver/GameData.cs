@@ -9,6 +9,15 @@ public class GameData
     public bool use_status;
     public string do_name;
     public string play_time;
+<<<<<<< HEAD
+}
+
+[System.Serializable]
+public class GameDataList
+{
+    public GameData[] items;
+=======
+>>>>>>> DH_db
 }
 
 [System.Serializable]
