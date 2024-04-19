@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI; // If you want to display the results on UI elements
@@ -6,57 +7,39 @@ using UnityEngine.UI; // If you want to display the results on UI elements
 public class GameDataLoader : MonoBehaviour
 {
     public string apiUrl = "http://localhost/Capstone24/ApiLoad.php";
-    int recordID = PlayerPrefs.GetInt("RecordID");
-    string studentID = PlayerPrefs.GetString("studentID");
-
-    public Text studentIdText;
-    public Text recordIdText;
-    public Text disasterText;
-    public Text playTimeText;
+    public Text RecordText;
 
     // Start is called before the first frame update
     void Start()
     {
+        int recordID = PlayerPrefs.GetInt("RecordID");
         StartCoroutine(GetGameData(recordID));
     }
 
     IEnumerator GetGameData(int recordID)
     {
-        string url = apiUrl + "?recordID=" + recordID;
-        using (UnityWebRequest webRequest = UnityWebRequest.Get(url))
+        string url = apiUrl + "?recordID=" + recordID.ToString();
+        using (UnityWebRequest www = UnityWebRequest.Get(url))
         {
             // Request and wait for the desired page.
-            yield return webRequest.SendWebRequest();
+            yield return www.SendWebRequest();
 
-            if (webRequest.result != UnityWebRequest.Result.Success)
+            if (www.result != UnityWebRequest.Result.Success)
             {
-                Debug.LogError("Error: " + webRequest.error);
+                Debug.LogError("Error: " + www.error);
             }
             else
             {
-                ProcessGameData(webRequest.downloadHandler.text);
+                string jsonResponse = www.downloadHandler.text;
+                Debug.Log("Received JSON: " + jsonResponse);
+
+                // JSON 데이터를 파싱하여 각 레코드의 내용을 디버그 로그에 출력
+                GameData[] records = JsonUtility.FromJson<GameDataList>(jsonResponse).items;
+                foreach (GameData record in records)
+                {
+                    Debug.Log($"Record ID: {record.recordID}, User ID: {record.User_id}, Disaster ID: {record.disaster_id}, Time: {record.play_time}");
+                }
             }
         }
     }
-
-    void ProcessGameData(string jsonData)
-    {
-        GameDataList dataList = JsonUtility.FromJson<GameDataList>(jsonData);
-        foreach (GameData data in dataList.items)
-        {
-           
-        }
-    }
-
-    // Disaster code to name helper
-    string GetDisasterName(int code)
-    {
-        switch (code)
-        {
-            case 1: return "불";
-            case 2: return "지진";
-            default: return "알 수 없음";
-        }
-    }
-
 }
