@@ -19,10 +19,16 @@ public class GameDataLoader : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape)) // 예를 들어, Esc 키를 누르면 종료
         {
-            int recordID = PlayerPrefs.GetInt("RecordID");
-            StartCoroutine(GetGameData(recordID));
-        }
 
+            StartCoroutine(Wait());
+        }
+    }
+
+    IEnumerator Wait()
+    {
+        int recordID = PlayerPrefs.GetInt("RecordID");
+        yield return new WaitForSeconds(0.2f);
+        StartCoroutine(GetGameData(recordID));
     }
 
     IEnumerator GetGameData(int recordID)
@@ -47,6 +53,11 @@ public class GameDataLoader : MonoBehaviour
                 foreach (GameData record in records)
                 {
                     Debug.Log($"Record ID: {record.recordID}, User ID: {record.ID}, Disaster ID: {record.disaster_id}, Time: {record.time}");
+
+                    if (record.disaster_id == 1)
+                    {
+                        Debug.Log($"Do_code: {record.Do_code}, Interact time: {record.interact_time}, Use: {record.use_status}");
+                    }
                 }
             }
         }
