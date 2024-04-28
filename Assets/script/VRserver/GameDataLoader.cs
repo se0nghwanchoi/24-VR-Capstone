@@ -12,8 +12,17 @@ public class GameDataLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int recordID = PlayerPrefs.GetInt("RecordID");
-        StartCoroutine(GetGameData(recordID));
+
+    }
+    private void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.Escape)) // 예를 들어, Esc 키를 누르면 종료
+        {
+            int recordID = PlayerPrefs.GetInt("RecordID");
+            StartCoroutine(GetGameData(recordID));
+        }
+
     }
 
     IEnumerator GetGameData(int recordID)
@@ -37,7 +46,7 @@ public class GameDataLoader : MonoBehaviour
                 GameData[] records = JsonUtility.FromJson<GameDataList>(jsonResponse).items;
                 foreach (GameData record in records)
                 {
-                    Debug.Log($"Record ID: {record.recordID}, User ID: {record.User_id}, Disaster ID: {record.disaster_id}, Time: {record.play_time}");
+                    Debug.Log($"Record ID: {record.recordID}, User ID: {record.ID}, Disaster ID: {record.disaster_id}, Time: {record.time}");
                 }
             }
         }

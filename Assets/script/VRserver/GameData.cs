@@ -5,8 +5,8 @@ public class GameData
 {
     public int recordID;
     public int disaster_id;
-    public string play_time;
-    public string User_id;
+    public string time;
+    public string ID;
 }
 
 [System.Serializable]
