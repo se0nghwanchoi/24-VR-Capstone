@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FireScene.unity
     guid: 9b5aa6428ba7a6246bd201ba8d95cebe
+  - enabled: 1
+    path: Assets/Scenes/FireScene 1.unity
+    guid: 4e5b94763fe789e4db5246d2329864d8
   - enabled: 0
     path: Assets/Scenes/Earthquake_Scene.unity
     guid: 772dc986eb25fdd4c8d89f008e082364

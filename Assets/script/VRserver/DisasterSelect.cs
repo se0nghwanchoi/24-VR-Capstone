@@ -19,11 +19,11 @@ public class DisasterSelect : MonoBehaviour
     // 서버로 사용자 선택을 보내는 코루틴
     IEnumerator SendDisasterSelectionToServer(string disaster)
     {
-        string studentID = IDmanager.Instance.StudentID;
+        //string studentID = IDmanager.Instance.StudentID;
 
         WWWForm form = new WWWForm();
-        form.AddField("disaster", disaster); //"fire"); //disaster); 강제로 fire로 넣어줌
-        form.AddField("ID", studentID); //"123"); //studentID); // id 입력 안받으면 강제로 123으로 넣어줌
+        form.AddField("disaster", "fire"); //disaster); 강제로 fire로 넣어줌
+        form.AddField("ID", "123"); //studentID); // id 입력 안받으면 강제로 123으로 넣어줌
 
         using (UnityWebRequest www = UnityWebRequest.Post(url, form))
         {
@@ -41,7 +41,7 @@ public class DisasterSelect : MonoBehaviour
 
                 // PlayerPrefs를 사용하여 recordID, Student ID 저장
                 PlayerPrefs.SetInt("RecordID", recordID);
-                PlayerPrefs.SetString("studentID", studentID); //"123"); // studentID); id입력 안받으면 강제로 123으로 넣어줌
+                PlayerPrefs.SetString("studentID", "123"); // studentID); id입력 안받으면 강제로 123으로 넣어줌
                 PlayerPrefs.Save();
             }
         }

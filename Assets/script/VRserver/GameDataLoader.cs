@@ -56,14 +56,20 @@ public class GameDataLoader : MonoBehaviour
             }
         }
     }
+
     void DisplayData(GameData[] records)
     {
         foreach (GameData record in records)
         {
-            // 데이터를 문자열 형태로 변환하여 UI Text에 표시
-            string displayText = $"Record ID: {record.recordID}, User ID: {record.ID}, Disaster ID: {record.disaster_id}, Time: {record.time}" + "\n" 
-                + $"Do_code: {record.Do_code}, Interact_time: {record.interact_time}, Use Status: {record.use_status}";
-            RecordText.text += displayText + "\n";  // UI Text에 데이터 추가
+            string baseinfo = $"Record ID: {record.recordID}, User ID: {record.ID}, Disaster ID: {record.disaster_id}, Time: {record.time}\n";
+            RecordText.text += baseinfo;
+
+
+            foreach (var doCode in record.DoCodes)
+            {
+                string doCodeInfo = $"   Do_code: {doCode.Do_code}, Interact_time: {doCode.interact_time}, Use Status: {doCode.use_status}\n";
+                RecordText.text += doCodeInfo;
+            }
         }
     }
 }
