@@ -4,11 +4,12 @@ using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI; // If you want to display the results on UI elements
+using TMPro;
 
 public class GameDataLoader : MonoBehaviour
 {
     public string apiUrl = "http://localhost/Capstone24/ApiLoad.php";
-    public Text RecordText;
+    public TMP_Text RecordText;
 
     // Start is called before the first frame update
     void Start()
