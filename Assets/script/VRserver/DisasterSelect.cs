@@ -22,8 +22,8 @@ public class DisasterSelect : MonoBehaviour
         string studentID = IDmanager.Instance.StudentID;
 
         WWWForm form = new WWWForm();
-        form.AddField("disaster", disaster);
-        form.AddField("ID", studentID);
+        form.AddField("disaster", disaster); //"fire"); //disaster); 강제로 fire로 넣어줌
+        form.AddField("ID", studentID); //"123"); //studentID); // id 입력 안받으면 강제로 123으로 넣어줌
 
         using (UnityWebRequest www = UnityWebRequest.Post(url, form))
         {
@@ -41,7 +41,7 @@ public class DisasterSelect : MonoBehaviour
 
                 // PlayerPrefs를 사용하여 recordID, Student ID 저장
                 PlayerPrefs.SetInt("RecordID", recordID);
-                PlayerPrefs.SetString("studentID", studentID);
+                PlayerPrefs.SetString("studentID", studentID); //"123"); // studentID); id입력 안받으면 강제로 123으로 넣어줌
                 PlayerPrefs.Save();
             }
         }
