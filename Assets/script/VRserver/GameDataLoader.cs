@@ -4,11 +4,12 @@ using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI; // If you want to display the results on UI elements
+using TMPro;
 
 public class GameDataLoader : MonoBehaviour
 {
     public string apiUrl = "http://localhost/Capstone24/ApiLoad.php";
-    public Text RecordText;
+    public TMP_Text RecordText;
 
     // Start is called before the first frame update
     void Start()
@@ -55,13 +56,20 @@ public class GameDataLoader : MonoBehaviour
             }
         }
     }
+
     void DisplayData(GameData[] records)
     {
         foreach (GameData record in records)
         {
-            // 데이터를 문자열 형태로 변환하여 UI Text에 표시
-            string displayText = $"Record ID: {record.recordID}, User ID: {record.ID}, Disaster ID: {record.disaster_id}, Time: {record.time}";
-            RecordText.text += displayText + "\n";  // UI Text에 데이터 추가
+            string baseinfo = $"Record ID: {record.recordID}, User ID: {record.ID}, Disaster ID: {record.disaster_id}, Time: {record.time}\n";
+            RecordText.text += baseinfo;
+
+
+            foreach (var doCode in record.DoCodes)
+            {
+                string doCodeInfo = $"   Do_code: {doCode.Do_code}, Interact_time: {doCode.interact_time}, Use Status: {doCode.use_status}\n";
+                RecordText.text += doCodeInfo;
+            }
         }
     }
 }
