@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Data;
 using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -50,16 +51,17 @@ public class GameDataLoader : MonoBehaviour
 
                 // JSON 데이터를 파싱하여 각 레코드의 내용을 디버그 로그에 출력
                 GameData[] records = JsonUtility.FromJson<GameDataList>(jsonResponse).items;
-                foreach (GameData record in records)
-                {
-                    Debug.Log($"Record ID: {record.recordID}, User ID: {record.ID}, Disaster ID: {record.disaster_id}, Time: {record.time}");
-
-                    if (record.disaster_id == 1)
-                    {
-                        Debug.Log($"Do_code: {record.Do_code}, Interact time: {record.interact_time}, Use: {record.use_status}");
-                    }
-                }
+                DisplayData(records);
             }
+        }
+    }
+    void DisplayData(GameData[] records)
+    {
+        foreach (GameData record in records)
+        {
+            // 데이터를 문자열 형태로 변환하여 UI Text에 표시
+            string displayText = $"Record ID: {record.recordID}, User ID: {record.ID}, Disaster ID: {record.disaster_id}, Time: {record.time}";
+            RecordText.text += displayText + "\n";  // UI Text에 데이터 추가
         }
     }
 }
