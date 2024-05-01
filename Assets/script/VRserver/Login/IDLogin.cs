@@ -12,8 +12,8 @@ public class IDLogin : MonoBehaviour
     public void ServerLogin()
     {
         string studentID = studentID_Field.text;
-        IDmanager.Instance.StudentID = studentID;
 
+        IDmanager.Instance.StudentID = studentID;
         StartCoroutine(CreateID(studentID));
     }
 
