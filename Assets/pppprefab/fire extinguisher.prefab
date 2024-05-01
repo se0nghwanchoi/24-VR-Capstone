@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5402868894194192361}
   - component: {fileID: 2575940802272038156}
+  - component: {fileID: 3329307280357954983}
   m_Layer: 0
   m_Name: acpoint
   m_TagString: FireEx
@@ -33,6 +34,27 @@ Transform:
   m_Father: {fileID: 7548821405949694719}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &2575940802272038156
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5093589526615103784}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 8}
+  m_Center: {x: 0, y: 0, z: 3}
+--- !u!65 &3329307280357954983
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,6 +121,8 @@ GameObject:
   - component: {fileID: 5693630892794209771}
   - component: {fileID: 988864905876925620}
   - component: {fileID: 3358615037231566095}
+  - component: {fileID: 6728059212286131063}
+  - component: {fileID: 5293414344782037673}
   m_Layer: 0
   m_Name: fire extinguisher
   m_TagString: Untagged
@@ -354,6 +378,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &3358615037231566095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8013437529493503456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 955e08a4aca74c14aa4592a77854e92f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6728059212286131063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8013437529493503456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c790279609e4464ca41383a0b524f29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5293414344782037673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
