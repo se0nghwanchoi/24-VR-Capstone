@@ -774,7 +774,7 @@ MonoBehaviour:
   fireCrawlSpeed: 1
   overrideFireVFX: 1
   overrideVFXVariant: 4
-  fireColor: {r: 0.7490196, g: 0, b: 0.61350477, a: 1}
+  fireColor: {r: 0.08767439, g: 0.10415698, b: 0.899371, a: 1}
   colorIntensityMultiplier: 200
   fireColorBlend: 0.2
   flameLength: 4

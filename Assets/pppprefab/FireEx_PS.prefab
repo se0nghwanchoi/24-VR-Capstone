@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5007884149257318861}
   - component: {fileID: 976740140782863436}
   - component: {fileID: 2162912173661005159}
-  - component: {fileID: 5901767256826366462}
+  - component: {fileID: 5643048507498279311}
   m_Layer: 0
   m_Name: FireEx_PS
   m_TagString: Spray
@@ -4930,7 +4930,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5901767256826366462
+--- !u!114 &5643048507498279311
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4939,14 +4939,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1159802555074588134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 983ed8ebdfc265348a06fc5361e5ff2d, type: 3}
+  m_Script: {fileID: 11500000, guid: 433614c4cd7e4ce44b13e031a1cef19b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Explosion: {fileID: 1338017871918850, guid: b93e4ddba4baebf47b7fb121d99b4a1e, type: 3}
-  Firepos1: {fileID: 0}
-  SecondFire: {fileID: 0}
-  ThirdStep: {fileID: 0}
-  broadcast: {fileID: 8300000, guid: f8b6573f5fb310343b7b564962183b8c, type: 3}
+  particleExtinquishRadius: 0.1
+  incrementalPower: 0.0005
 --- !u!1 &1215077094847765793
 GameObject:
   m_ObjectHideFlags: 0
