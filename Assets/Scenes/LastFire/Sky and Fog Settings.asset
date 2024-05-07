@@ -138,7 +138,7 @@ MonoBehaviour:
     m_Value: {x: 0.2881244, y: 0.3579199, z: 0.5}
   desiredLuxValue:
     m_OverrideState: 1
-    m_Value: 10000
+    m_Value: 400
   updateMode:
     m_OverrideState: 0
     m_Value: 0
