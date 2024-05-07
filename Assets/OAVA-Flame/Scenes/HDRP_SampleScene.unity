@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 11.572587, g: 14.337805, b: 18.979061, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -317,7 +317,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   openTabUpper: 0
-  openTabLower: 0
+  openTabLower: 4
 --- !u!1 &119136966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,7 +1439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 2000
+  m_Intensity: 11421.532
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -1561,7 +1561,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2000
+  m_Intensity: 11421.532
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1693,10 +1693,6 @@ MonoBehaviour:
   m_Script: {fileID: 686126038}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries:
-  - id: 0
-    category: 0
-    gameObject: {fileID: 1572273828}
 --- !u!4 &1050247724
 Transform:
   m_ObjectHideFlags: 19
@@ -3161,10 +3157,6 @@ MonoBehaviour:
   m_Script: {fileID: 686126038}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries:
-  - id: 0
-    category: 0
-    gameObject: {fileID: 1572273828}
 --- !u!4 &1664350937
 Transform:
   m_ObjectHideFlags: 19
@@ -3801,7 +3793,7 @@ Light:
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
-  m_AreaSize: {x: 1, y: 1}
+  m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
@@ -4819,6 +4811,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6879555838758522324, guid: ff523b4c3844bd648a8417a742502529,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6879555838758522325, guid: ff523b4c3844bd648a8417a742502529,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
@@ -4941,6 +4938,11 @@ PrefabInstance:
         type: 3}
       propertyPath: extinguishPower
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5048412838593251204, guid: 403fcc14337262647a0d78bcf3c9296e,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5048412838593251204, guid: 403fcc14337262647a0d78bcf3c9296e,
         type: 3}
