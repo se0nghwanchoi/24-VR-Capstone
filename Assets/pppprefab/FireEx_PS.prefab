@@ -4942,7 +4942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433614c4cd7e4ce44b13e031a1cef19b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleExtinquishRadius: 0.1
+  particleExtinquishRadius: 1
   incrementalPower: 0.0005
 --- !u!1 &1215077094847765793
 GameObject:

@@ -363,7 +363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animFire: {fileID: 1393328848680235741}
   createPoint: {fileID: 5402868894194192361}
-  particlePrefab: {fileID: 8328793494078772944, guid: d185166a8aa271949a5619e2de3943c2,
+  particlePrefab: {fileID: 1159802555074588134, guid: d185166a8aa271949a5619e2de3943c2,
     type: 3}
 --- !u!114 &988864905876925620
 MonoBehaviour:
