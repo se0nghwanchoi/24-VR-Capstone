@@ -33882,9 +33882,9 @@ MonoBehaviour:
       m_SphereRadius: 3
       m_SphereBlendDistance: 0
       m_SphereBlendNormalDistance: 0
-      m_EditorAdvancedModeBlendDistancePositive: {x: 0, y: 0, z: 0}
-      m_EditorAdvancedModeBlendDistanceNegative: {x: 0, y: 0, z: 0}
-      m_EditorSimplifiedModeBlendDistance: 0
+      m_EditorAdvancedModeBlendDistancePositive: {x: 0.4, y: 0.4, z: 0.4}
+      m_EditorAdvancedModeBlendDistanceNegative: {x: 0.4, y: 0.4, z: 0.4}
+      m_EditorSimplifiedModeBlendDistance: 0.4
       m_EditorAdvancedModeBlendNormalDistancePositive: {x: 0, y: 0, z: 0}
       m_EditorAdvancedModeBlendNormalDistanceNegative: {x: 0, y: 0, z: 0}
       m_EditorSimplifiedModeBlendNormalDistance: 0
@@ -61353,9 +61353,9 @@ MonoBehaviour:
       m_SphereRadius: 3
       m_SphereBlendDistance: 0
       m_SphereBlendNormalDistance: 0
-      m_EditorAdvancedModeBlendDistancePositive: {x: 0, y: 0, z: 0}
-      m_EditorAdvancedModeBlendDistanceNegative: {x: 0, y: 0, z: 0}
-      m_EditorSimplifiedModeBlendDistance: 0
+      m_EditorAdvancedModeBlendDistancePositive: {x: 0.4, y: 0.4, z: 0.4}
+      m_EditorAdvancedModeBlendDistanceNegative: {x: 0.4, y: 0.4, z: 0.4}
+      m_EditorSimplifiedModeBlendDistance: 0.4
       m_EditorAdvancedModeBlendNormalDistancePositive: {x: 0, y: 0, z: 0}
       m_EditorAdvancedModeBlendNormalDistanceNegative: {x: 0, y: 0, z: 0}
       m_EditorSimplifiedModeBlendNormalDistance: 0
