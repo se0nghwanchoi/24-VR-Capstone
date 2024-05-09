@@ -8,7 +8,7 @@ public class IDLogin : MonoBehaviour
 {
     public InputField studentID_Field;
     public string url = "http://localhost/Capstone24/CreateID.php";
-
+    //public string url = "http://211.250.192.52:8080/Capstone24/CreateID.php";
     public void ServerLogin()
     {
         string studentID = studentID_Field.text;

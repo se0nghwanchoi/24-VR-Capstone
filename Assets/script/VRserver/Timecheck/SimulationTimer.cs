@@ -9,7 +9,8 @@ public class SimulationTimer : MonoBehaviour
 {
     private float SimStart;
     private bool Run;
-
+    private string url = "http://localhost/Capstone24/TimeCheck.php";
+    //private string url = "http://211.250.192.52:8080/Capstone24/TimeCheck.php";
     public void Start()
     {
         StartSimulation();
@@ -64,7 +65,7 @@ public class SimulationTimer : MonoBehaviour
         form.AddField("recordID", recordID);
         form.AddField("time", Sim_clear.ToString());
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/Capstone24/TimeCheck.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post(url, form))
         {
             yield return www.SendWebRequest();
 

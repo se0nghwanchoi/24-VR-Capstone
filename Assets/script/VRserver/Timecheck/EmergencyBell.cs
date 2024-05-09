@@ -9,7 +9,8 @@ public class EmergencyBell : MonoBehaviour
 {
     private XRSimpleInteractable simpleInteractable;
     private bool Used = false;
-
+    private string url = "http://localhost/Capstone24/UnitActs.php";
+    //private string url = "http://211.250.192.52:8080/Capstone24/UnitActs.php";
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

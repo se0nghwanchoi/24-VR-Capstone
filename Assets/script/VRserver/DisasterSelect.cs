@@ -9,7 +9,7 @@ public class DisasterSelect : MonoBehaviour
 {
     // PHP 스크립트 URL
     private string url = "http://localhost/Capstone24/disasterSelection.php";
-
+    //private string url = "http://211.250.192.52:8080/Capstone24/disasterSelection.php";
     // 버튼에 연결할 메소드
     public void OnDisasterSelected(string disasterName)
     {

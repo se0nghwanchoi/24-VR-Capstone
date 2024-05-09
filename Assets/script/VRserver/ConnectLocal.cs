@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 public class ConnectLocal : MonoBehaviour
 {
     private string url = "http://localhost/Capstone24/recordSelection.php";
-
+    //private string url = "http://211.250.192.52:8080/Capstone24/recordSelection.php";
     // 게임이 시작할 때 호출됩니다.
     void Start()
     {
