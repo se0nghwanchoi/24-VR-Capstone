@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Typhoon_Scene.unity
     guid: 0ef17415168d5fe42bc23a8e0f8a60d9
   - enabled: 1
+    path: Assets/Scenes/LastFire.unity
+    guid: 7e99335ca31adeb4c871af0934f80022
+  - enabled: 1
     path: Assets/Scenes/login.unity
     guid: b521ec8ce463b4245978385992cace5e
   m_configObjects:
