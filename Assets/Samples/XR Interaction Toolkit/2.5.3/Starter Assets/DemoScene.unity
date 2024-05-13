@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 10970.95, g: 7560.704, b: 6717.055, a: 1}
+  m_IndirectSpecularColor: {r: 10971.914, g: 7561.6396, b: 6717.5386, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -666,6 +666,74 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &245218106
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4623170854986649645, guid: 7dabb96d319a196499f2ae17c5e24dc4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623170854986649645, guid: 7dabb96d319a196499f2ae17c5e24dc4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623170854986649645, guid: 7dabb96d319a196499f2ae17c5e24dc4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.711
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623170854986649645, guid: 7dabb96d319a196499f2ae17c5e24dc4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623170854986649645, guid: 7dabb96d319a196499f2ae17c5e24dc4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623170854986649645, guid: 7dabb96d319a196499f2ae17c5e24dc4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623170854986649645, guid: 7dabb96d319a196499f2ae17c5e24dc4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623170854986649645, guid: 7dabb96d319a196499f2ae17c5e24dc4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623170854986649645, guid: 7dabb96d319a196499f2ae17c5e24dc4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623170854986649645, guid: 7dabb96d319a196499f2ae17c5e24dc4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4677607287131966356, guid: 7dabb96d319a196499f2ae17c5e24dc4,
+        type: 3}
+      propertyPath: m_Name
+      value: Waterfall
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7dabb96d319a196499f2ae17c5e24dc4, type: 3}
 --- !u!1 &304738799
 GameObject:
   m_ObjectHideFlags: 0
@@ -4205,6 +4273,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d5e938d1d5f074c949ce18ce1afd06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1384606637
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3254177377659943870, guid: e6264cff82abb294fb721d84c3128fd4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254177377659943870, guid: e6264cff82abb294fb721d84c3128fd4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1258876
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254177377659943870, guid: e6264cff82abb294fb721d84c3128fd4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254177377659943870, guid: e6264cff82abb294fb721d84c3128fd4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254177377659943870, guid: e6264cff82abb294fb721d84c3128fd4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254177377659943870, guid: e6264cff82abb294fb721d84c3128fd4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254177377659943870, guid: e6264cff82abb294fb721d84c3128fd4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254177377659943870, guid: e6264cff82abb294fb721d84c3128fd4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254177377659943870, guid: e6264cff82abb294fb721d84c3128fd4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254177377659943870, guid: e6264cff82abb294fb721d84c3128fd4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8453179540461878737, guid: e6264cff82abb294fb721d84c3128fd4,
+        type: 3}
+      propertyPath: m_Name
+      value: Towel_hanging_small
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e6264cff82abb294fb721d84c3128fd4, type: 3}
 --- !u!1 &1486677401
 GameObject:
   m_ObjectHideFlags: 0
@@ -12773,3 +12909,5 @@ SceneRoots:
   - {fileID: 620627655}
   - {fileID: 2077674933}
   - {fileID: 304738801}
+  - {fileID: 245218106}
+  - {fileID: 1384606637}

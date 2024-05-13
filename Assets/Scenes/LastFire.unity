@@ -7653,7 +7653,7 @@ PrefabInstance:
     - target: {fileID: 3329578098271135418, guid: c37010faba6cf3f4aab49dc4b1576cda,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3543620107509558751, guid: c37010faba6cf3f4aab49dc4b1576cda,
         type: 3}
@@ -36762,7 +36762,7 @@ PrefabInstance:
     - target: {fileID: 2848304234089639368, guid: 1ecefa4efc8ab5b4d9baef30f5541074,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3296731963070523808, guid: 1ecefa4efc8ab5b4d9baef30f5541074,
         type: 3}
@@ -39372,12 +39372,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
---- !u!4 &1532119771 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2575422778277556264, guid: b56e90d55372f56419f6f935201b92d3,
-    type: 3}
-  m_PrefabInstance: {fileID: 1866890982}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1534850069
 GameObject:
   m_ObjectHideFlags: 0
@@ -39699,6 +39693,7 @@ GameObject:
   - component: {fileID: 1549062639}
   - component: {fileID: 1549062638}
   - component: {fileID: 1549062637}
+  - component: {fileID: 1549062641}
   m_Layer: 0
   m_Name: ClosetDoor_Base
   m_TagString: Untagged
@@ -39734,9 +39729,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469e00e876fb40142af620db2b198643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  simpleInteractable: {fileID: 2017260883}
   Closetopenandclose: {fileID: 2017260878}
   open: 0
-  Player: {fileID: 1532119771}
 --- !u!65 &1549062638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39808,6 +39803,108 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549062635}
   m_Mesh: {fileID: -5640749574685318226, guid: cd0bf29c9c9af6f4098b74076d25f0cd, type: 3}
+--- !u!114 &1549062641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549062635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1552741402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41444,7 +41541,7 @@ PrefabInstance:
     - target: {fileID: 1704969463106577193, guid: 92478e2d75698b140b64918b714e17fa,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5717656839128923502, guid: 92478e2d75698b140b64918b714e17fa,
         type: 3}
@@ -45137,7 +45234,7 @@ PrefabInstance:
     - target: {fileID: 3329578098271135418, guid: c37010faba6cf3f4aab49dc4b1576cda,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3543620107509558751, guid: c37010faba6cf3f4aab49dc4b1576cda,
         type: 3}
@@ -47491,6 +47588,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 116086521612358215, guid: b56e90d55372f56419f6f935201b92d3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3e0eca01ba4cada4b9f8823d3dbf770b, type: 2}
     - target: {fileID: 2273501209263438879, guid: b56e90d55372f56419f6f935201b92d3,
         type: 3}
       propertyPath: m_Name
@@ -47571,6 +47673,11 @@ PrefabInstance:
       propertyPath: m_AllowMSAA
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5426554517508184394, guid: b56e90d55372f56419f6f935201b92d3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3e0eca01ba4cada4b9f8823d3dbf770b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -51504,6 +51611,7 @@ GameObject:
   - component: {fileID: 2017260880}
   - component: {fileID: 2017260879}
   - component: {fileID: 2017260878}
+  - component: {fileID: 2017260883}
   m_Layer: 0
   m_Name: ClosetDoor
   m_TagString: Untagged
@@ -51560,9 +51668,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469e00e876fb40142af620db2b198643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  simpleInteractable: {fileID: 2017260883}
   Closetopenandclose: {fileID: 2017260878}
   open: 0
-  Player: {fileID: 1532119771}
 --- !u!65 &2017260880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51634,6 +51742,108 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017260876}
   m_Mesh: {fileID: -9149891522700011978, guid: cd0bf29c9c9af6f4098b74076d25f0cd, type: 3}
+--- !u!114 &2017260883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017260876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &2021384294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53381,7 +53591,7 @@ PrefabInstance:
     - target: {fileID: 1704969463106577193, guid: 92478e2d75698b140b64918b714e17fa,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5717656839128923502, guid: 92478e2d75698b140b64918b714e17fa,
         type: 3}
