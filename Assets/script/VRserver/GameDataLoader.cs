@@ -17,6 +17,7 @@ public class GameDataLoader : MonoBehaviour
     {
 
     }
+
     private void Update()
     {
 
@@ -62,13 +63,30 @@ public class GameDataLoader : MonoBehaviour
     {
         foreach (GameData record in records)
         {
-            string baseinfo = $"Record ID: {record.recordID}, User ID: {record.ID}, Disaster ID: {record.disaster_id}, Time: {record.time}\n";
+            string baseinfo = $"학번: {record.ID},                     총 플레이 시간: {record.time}\n";
+            //string baseinfo = $"Record ID: {record.recordID}, User ID: {record.ID}, Disaster ID: {record.disaster_id}, Time: {record.time}\n";
             RecordText.text += baseinfo;
 
 
             foreach (var doCode in record.DoCodes)
             {
-                string doCodeInfo = $"   Do_code: {doCode.Do_code}, Interact_time: {doCode.interact_time}, Use Status: {doCode.use_status}\n";
+                string doCodeInfo = null;
+
+                if (doCode.Do_code == 1)
+                    doCodeInfo = $"아이템: 수건              상호작용 시간: {doCode.interact_time}\n";
+                else if (doCode.Do_code == 2)
+                    doCodeInfo = $"아이템: 핸드폰          상호작용 시간: {doCode.interact_time}\n";
+                else if (doCode.Do_code == 3)
+                    doCodeInfo = $"아이템: 소화기          상호작용 시간: {doCode.interact_time}\n";
+                else if (doCode.Do_code == 4)
+                {
+                    if (doCode.use_status == 1)
+                        doCodeInfo = $"아이템: 비상벨          비상벨 작동 여부: O\n";
+                    else doCodeInfo = $"아이템: 비상벨          비상벨 작동 여부: X\n";
+                }
+
+
+                //string doCodeInfo = $"Do_code: {doCode.Do_code}, Interact_time: {doCode.interact_time}, Use Status: {doCode.use_status}\n";
                 RecordText.text += doCodeInfo;
             }
         }
