@@ -6,6 +6,6 @@ public class changescene : MonoBehaviour
 {
    public void ChangesceneBtn()
     {
-        SceneManager.LoadScene("Main_Menu");
+        SceneManager.LoadScene("LastFire");
     }
 }
