@@ -15,8 +15,10 @@ public class Extinguisher : MonoBehaviour
     void Start()
     {
         XRGrabInteractable XGI = GetComponent<XRGrabInteractable>();
-
+        
         XGI.activated.AddListener(FireEx);
+        XGI.selectEntered.AddListener(GrapHose);
+        XGI.selectExited.AddListener(ReleaseHose);
     }
 
     public void FireEx(ActivateEventArgs arg)
@@ -33,5 +35,15 @@ public class Extinguisher : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         animFire.SetBool("Push_Btn_Reverse", true);
+    }
+
+    public void GrapHose(SelectEnterEventArgs args)
+    {
+        animFire.SetBool("Grap_Hose", true);
+    }
+
+    public void ReleaseHose(SelectExitEventArgs args)
+    {
+        animFire.SetBool("Grap_Hose", false);
     }
 }
