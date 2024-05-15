@@ -65,7 +65,7 @@ public class GameDataLoader : MonoBehaviour
     {
         foreach (GameData record in records)
         {
-            string baseinfo = $"학번: {record.ID},                     총 플레이 시간: {record.time}\n";
+            string baseinfo = $"학번: {record.ID}                     총 플레이 시간: {record.time}\n";
             //string baseinfo = $"Record ID: {record.recordID}, User ID: {record.ID}, Disaster ID: {record.disaster_id}, Time: {record.time}\n";
             RecordText.text += baseinfo;
 
@@ -126,19 +126,20 @@ public class GameDataLoader : MonoBehaviour
 
                 //string doCodeInfo = $"Do_code: {doCode.Do_code}, Interact_time: {doCode.interact_time}, Use Status: {doCode.use_status}\n";
                 RecordText.text += doCodeInfo;
+                RecordText.text += "\n\n";
 
             }
 
             if (count == 5)
-                RecordText.text += "A";
+                RecordText.text += "      A";
             else if (count == 4)
-                RecordText.text += "B";
+                RecordText.text += "      B";
             else if (count == 3)
-                RecordText.text += "C";
+                RecordText.text += "      C";
             else if (count == 2)
-                RecordText.text += "D";
+                RecordText.text += "      D";
             else
-                RecordText.text += "F";
+                RecordText.text += "      F";
         }
     }
 }
