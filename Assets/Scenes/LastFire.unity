@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.170033, g: 0.21353868, b: 0.27390614, a: 1}
+  m_IndirectSpecularColor: {r: 0.16969995, g: 0.21319982, b: 0.27347448, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1204,6 +1204,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 32854340}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &34972735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3137372301056268186, guid: 699d05550aa356b43a052438a558c0c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1696814381}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &35163339 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4934545074529206191, guid: 9c993bdd1f0fb3e4da5b61dabec5fbb3,
@@ -1565,7 +1571,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3137372301056268186, guid: 699d05550aa356b43a052438a558c0c2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 145253970}
   m_SourcePrefab: {fileID: 100100000, guid: 699d05550aa356b43a052438a558c0c2, type: 3}
 --- !u!4 &68746487 stripped
 Transform:
@@ -3240,6 +3250,90 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1440511008}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &145253959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3137372301056268186, guid: 699d05550aa356b43a052438a558c0c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 68746486}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &145253970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145253959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fa1a403ac351a47a29cea99a046537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpread: 10000
+  fireCrawlSpeed: 1
+  overrideFireVFX: 0
+  overrideVFXVariant: 3
+  fireColor: {r: 1, g: 0, b: 0, a: 1}
+  colorIntensityMultiplier: 3
+  fireColorBlend: 0.1
+  flameLength: 2
+  smokeColor: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 1}
+  smokeColorIntensity: 10
+  smokeAlpha: 0.7
+  smokeVFXMultiplier: 0.5
+  smokeParticleSize: 1
+  embersVFXMultiplier: 1
+  embersBurstVFXMultiplier: 1
+  embersBurstDelayMinMax: {x: 4, y: 6}
+  embersParticleSize: 1
+  useExtinguishSteam: 1
+  enableMaterialAnimation: 1
+  shaderEmissionColor: {r: 0.94509804, g: 0.4745098, b: 0.043137256, a: 1}
+  shaderBurntColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  shaderToBurntInterpolateSpeed: 0.03
+  shaderEmissionMultiplier: 1
+  achieveMaxBrightness_s: 20
+  shaderColorNoise: 0.05
+  shaderColorNoiseSpeed: 1
+  useMaterialAnimationOnAllRenderers: 1
+  animateMaterialsRenderers: []
+  flameCatchAreaAddition: {x: 0.5, y: 0.5, z: 0.5}
+  setThisOnFireOnStart: 0
+  fireSpread: 0
+  onFireTimer: 0
+  isEffectOnForever: 0
+  burnOutStart_s: 30
+  burnOutLength_s: 100
+  isReignitable: 0
+  deleteAfterBurnout: 0
+  useMeshFire: 0
+  meshFireCount: 10
+  meshFireMeshFilters: []
+  calculateFlammationAreaFromMesh: 0
+  affectedByWind: 1
+  ignitionTime: 0
+  enableFlameVFX: 1
+  flameEnvironmentalSpeed: 1
+  flameLiveliness: 1
+  windForceMultiplier: 1
+  flameLivelinessSpeed: 1
+  flameParticleSize: 1
+  flameBurstDelayMinMax: {x: 0, y: 0}
+  flameAreaNoiseMinMaxMultiplier: {x: 0.9, y: 1.1}
+  flameVFXMultiplier: 1
+  onFire: 0
+  flammableColliders: []
+  flammableMaterialIndexes: 
+  useFireSFX: 1
+  customFireSFX: {fileID: 0}
+  customFireOriginOnStart: {fileID: 0}
+  flameLights: []
+  fullExtinguishToughness: 0.7
+  backSpreadCoolDown_s: 5
+  spreadLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  openTabUpper: 0
+  openTabLower: 4
 --- !u!1 &146508294 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6449584350095330671, guid: 447482a62d099f64eb06d91f57597382,
@@ -8283,7 +8377,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7077077325870283953, guid: 8f86dc0b2d4b7504eb2b3980c06b38c5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 374063835}
   m_SourcePrefab: {fileID: 100100000, guid: 8f86dc0b2d4b7504eb2b3980c06b38c5, type: 3}
 --- !u!4 &344607218 stripped
 Transform:
@@ -8838,6 +8936,90 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370590556}
   m_Mesh: {fileID: -603478835644340257, guid: cb07ca870cf1d5444b85ea4e3ee49a58, type: 3}
+--- !u!1 &374063823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7077077325870283953, guid: 8f86dc0b2d4b7504eb2b3980c06b38c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 344607217}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &374063835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374063823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fa1a403ac351a47a29cea99a046537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpread: 10000
+  fireCrawlSpeed: 1
+  overrideFireVFX: 0
+  overrideVFXVariant: 3
+  fireColor: {r: 1, g: 0, b: 0, a: 1}
+  colorIntensityMultiplier: 3
+  fireColorBlend: 0.1
+  flameLength: 2
+  smokeColor: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 1}
+  smokeColorIntensity: 10
+  smokeAlpha: 0.7
+  smokeVFXMultiplier: 0.5
+  smokeParticleSize: 1
+  embersVFXMultiplier: 1
+  embersBurstVFXMultiplier: 1
+  embersBurstDelayMinMax: {x: 4, y: 6}
+  embersParticleSize: 1
+  useExtinguishSteam: 1
+  enableMaterialAnimation: 1
+  shaderEmissionColor: {r: 0.94509804, g: 0.4745098, b: 0.043137256, a: 1}
+  shaderBurntColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  shaderToBurntInterpolateSpeed: 0.03
+  shaderEmissionMultiplier: 1
+  achieveMaxBrightness_s: 20
+  shaderColorNoise: 0.05
+  shaderColorNoiseSpeed: 1
+  useMaterialAnimationOnAllRenderers: 1
+  animateMaterialsRenderers: []
+  flameCatchAreaAddition: {x: 0.5, y: 0.5, z: 0.5}
+  setThisOnFireOnStart: 0
+  fireSpread: 0
+  onFireTimer: 0
+  isEffectOnForever: 0
+  burnOutStart_s: 30
+  burnOutLength_s: 10
+  isReignitable: 0
+  deleteAfterBurnout: 0
+  useMeshFire: 0
+  meshFireCount: 10
+  meshFireMeshFilters: []
+  calculateFlammationAreaFromMesh: 0
+  affectedByWind: 1
+  ignitionTime: 0
+  enableFlameVFX: 1
+  flameEnvironmentalSpeed: 1
+  flameLiveliness: 1
+  windForceMultiplier: 1
+  flameLivelinessSpeed: 1
+  flameParticleSize: 1
+  flameBurstDelayMinMax: {x: 0, y: 0}
+  flameAreaNoiseMinMaxMultiplier: {x: 0.9, y: 1.1}
+  flameVFXMultiplier: 1
+  onFire: 0
+  flammableColliders: []
+  flammableMaterialIndexes: 
+  useFireSFX: 1
+  customFireSFX: {fileID: 0}
+  customFireOriginOnStart: {fileID: 0}
+  flameLights: []
+  fullExtinguishToughness: 0.7
+  backSpreadCoolDown_s: 5
+  spreadLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  openTabUpper: 1
+  openTabLower: 4
 --- !u!1001 &374861322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14157,6 +14339,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 583973127}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &587888944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2289098282633321536, guid: 1ff0df4660b6d8d48a9160c024b22f49,
+    type: 3}
+  m_PrefabInstance: {fileID: 1098011013}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &588766818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16679,7 +16867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpread: 10000
-  fireCrawlSpeed: 0.1
+  fireCrawlSpeed: 0.05
   overrideFireVFX: 0
   overrideVFXVariant: 3
   fireColor: {r: 1, g: 0, b: 0, a: 1}
@@ -16742,7 +16930,7 @@ MonoBehaviour:
   spreadLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  openTabUpper: 1
+  openTabUpper: 0
   openTabLower: 4
 --- !u!1001 &655582319
 PrefabInstance:
@@ -21001,7 +21189,7 @@ MonoBehaviour:
   onFireTimer: 0
   isEffectOnForever: 0
   burnOutStart_s: 30
-  burnOutLength_s: 30
+  burnOutLength_s: 100
   isReignitable: 0
   deleteAfterBurnout: 0
   useMeshFire: 0
@@ -23241,7 +23429,7 @@ MonoBehaviour:
   onFireTimer: 0
   isEffectOnForever: 0
   burnOutStart_s: 30
-  burnOutLength_s: 30
+  burnOutLength_s: 100
   isReignitable: 0
   deleteAfterBurnout: 0
   useMeshFire: 0
@@ -25544,6 +25732,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 295628764544084513, guid: 5751082ea532e49478e631f5ff9a1cfa,
     type: 3}
   m_PrefabInstance: {fileID: 967696697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &968910938 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3620850855418105264, guid: e5604fb700a2cfc418932ebfc1cb786d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1224720478}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &970689595
 GameObject:
@@ -28191,7 +28385,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2289098282633321536, guid: 1ff0df4660b6d8d48a9160c024b22f49,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1098011018}
   m_SourcePrefab: {fileID: 100100000, guid: 1ff0df4660b6d8d48a9160c024b22f49, type: 3}
 --- !u!4 &1098011014 stripped
 Transform:
@@ -28199,6 +28397,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1098011013}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1098011018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587888944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fa1a403ac351a47a29cea99a046537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpread: 10000
+  fireCrawlSpeed: 1
+  overrideFireVFX: 0
+  overrideVFXVariant: 3
+  fireColor: {r: 1, g: 0, b: 0, a: 1}
+  colorIntensityMultiplier: 3
+  fireColorBlend: 0.1
+  flameLength: 2
+  smokeColor: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 1}
+  smokeColorIntensity: 10
+  smokeAlpha: 0.7
+  smokeVFXMultiplier: 0.5
+  smokeParticleSize: 1
+  embersVFXMultiplier: 1
+  embersBurstVFXMultiplier: 1
+  embersBurstDelayMinMax: {x: 4, y: 6}
+  embersParticleSize: 1
+  useExtinguishSteam: 1
+  enableMaterialAnimation: 1
+  shaderEmissionColor: {r: 0.94509804, g: 0.4745098, b: 0.043137256, a: 1}
+  shaderBurntColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  shaderToBurntInterpolateSpeed: 0.03
+  shaderEmissionMultiplier: 1
+  achieveMaxBrightness_s: 20
+  shaderColorNoise: 0.05
+  shaderColorNoiseSpeed: 1
+  useMaterialAnimationOnAllRenderers: 1
+  animateMaterialsRenderers: []
+  flameCatchAreaAddition: {x: 0.5, y: 0.5, z: 0.5}
+  setThisOnFireOnStart: 0
+  fireSpread: 0
+  onFireTimer: 0
+  isEffectOnForever: 0
+  burnOutStart_s: 30
+  burnOutLength_s: 10
+  isReignitable: 0
+  deleteAfterBurnout: 0
+  useMeshFire: 0
+  meshFireCount: 10
+  meshFireMeshFilters: []
+  calculateFlammationAreaFromMesh: 0
+  affectedByWind: 1
+  ignitionTime: 0
+  enableFlameVFX: 1
+  flameEnvironmentalSpeed: 1
+  flameLiveliness: 1
+  windForceMultiplier: 1
+  flameLivelinessSpeed: 1
+  flameParticleSize: 1
+  flameBurstDelayMinMax: {x: 0, y: 0}
+  flameAreaNoiseMinMaxMultiplier: {x: 0.9, y: 1.1}
+  flameVFXMultiplier: 1
+  onFire: 0
+  flammableColliders: []
+  flammableMaterialIndexes: 
+  useFireSFX: 1
+  customFireSFX: {fileID: 0}
+  customFireOriginOnStart: {fileID: 0}
+  flameLights: []
+  fullExtinguishToughness: 0.7
+  backSpreadCoolDown_s: 5
+  spreadLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  openTabUpper: 0
+  openTabLower: 4
 --- !u!1001 &1099304366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31321,7 +31597,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3620850855418105264, guid: e5604fb700a2cfc418932ebfc1cb786d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1224720489}
   m_SourcePrefab: {fileID: 100100000, guid: e5604fb700a2cfc418932ebfc1cb786d, type: 3}
 --- !u!4 &1224720479 stripped
 Transform:
@@ -31329,6 +31609,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1224720478}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1224720489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968910938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fa1a403ac351a47a29cea99a046537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpread: 10000
+  fireCrawlSpeed: 1
+  overrideFireVFX: 0
+  overrideVFXVariant: 3
+  fireColor: {r: 1, g: 0, b: 0, a: 1}
+  colorIntensityMultiplier: 3
+  fireColorBlend: 0.1
+  flameLength: 2
+  smokeColor: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 1}
+  smokeColorIntensity: 10
+  smokeAlpha: 0.7
+  smokeVFXMultiplier: 0.5
+  smokeParticleSize: 1
+  embersVFXMultiplier: 1
+  embersBurstVFXMultiplier: 1
+  embersBurstDelayMinMax: {x: 4, y: 6}
+  embersParticleSize: 1
+  useExtinguishSteam: 1
+  enableMaterialAnimation: 1
+  shaderEmissionColor: {r: 0.94509804, g: 0.4745098, b: 0.043137256, a: 1}
+  shaderBurntColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  shaderToBurntInterpolateSpeed: 0.03
+  shaderEmissionMultiplier: 1
+  achieveMaxBrightness_s: 20
+  shaderColorNoise: 0.05
+  shaderColorNoiseSpeed: 1
+  useMaterialAnimationOnAllRenderers: 1
+  animateMaterialsRenderers: []
+  flameCatchAreaAddition: {x: 0.5, y: 0.5, z: 0.5}
+  setThisOnFireOnStart: 0
+  fireSpread: 0
+  onFireTimer: 0
+  isEffectOnForever: 0
+  burnOutStart_s: 100
+  burnOutLength_s: 100
+  isReignitable: 0
+  deleteAfterBurnout: 0
+  useMeshFire: 0
+  meshFireCount: 10
+  meshFireMeshFilters: []
+  calculateFlammationAreaFromMesh: 0
+  affectedByWind: 1
+  ignitionTime: 0
+  enableFlameVFX: 1
+  flameEnvironmentalSpeed: 1
+  flameLiveliness: 5.3
+  windForceMultiplier: 1
+  flameLivelinessSpeed: 1
+  flameParticleSize: 1
+  flameBurstDelayMinMax: {x: 0, y: 0}
+  flameAreaNoiseMinMaxMultiplier: {x: 0.9, y: 1.1}
+  flameVFXMultiplier: 1
+  onFire: 0
+  flammableColliders: []
+  flammableMaterialIndexes: 
+  useFireSFX: 1
+  customFireSFX: {fileID: 0}
+  customFireOriginOnStart: {fileID: 0}
+  flameLights: []
+  fullExtinguishToughness: 0.7
+  backSpreadCoolDown_s: 5
+  spreadLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  openTabUpper: 1
+  openTabLower: 4
 --- !u!4 &1229734897 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3104823344228034900, guid: 4b8479d89552feb4da317125af5dc129,
@@ -42872,7 +43230,7 @@ MonoBehaviour:
   fireColor: {r: 1, g: 0, b: 0, a: 1}
   colorIntensityMultiplier: 3
   fireColorBlend: 0.1
-  flameLength: 2
+  flameLength: 3
   smokeColor: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 1}
   smokeColorIntensity: 10
   smokeAlpha: 0.7
@@ -42910,7 +43268,7 @@ MonoBehaviour:
   ignitionTime: 0
   enableFlameVFX: 1
   flameEnvironmentalSpeed: 1
-  flameLiveliness: 1
+  flameLiveliness: 4.4
   windForceMultiplier: 1
   flameLivelinessSpeed: 1
   flameParticleSize: 1
@@ -44918,7 +45276,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3137372301056268186, guid: 699d05550aa356b43a052438a558c0c2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1696814393}
   m_SourcePrefab: {fileID: 100100000, guid: 699d05550aa356b43a052438a558c0c2, type: 3}
 --- !u!4 &1696814382 stripped
 Transform:
@@ -44926,6 +45288,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1696814381}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1696814393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34972735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fa1a403ac351a47a29cea99a046537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpread: 10000
+  fireCrawlSpeed: 1
+  overrideFireVFX: 0
+  overrideVFXVariant: 3
+  fireColor: {r: 1, g: 0, b: 0, a: 1}
+  colorIntensityMultiplier: 3
+  fireColorBlend: 0.1
+  flameLength: 2
+  smokeColor: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 1}
+  smokeColorIntensity: 10
+  smokeAlpha: 0.7
+  smokeVFXMultiplier: 0.5
+  smokeParticleSize: 1
+  embersVFXMultiplier: 1
+  embersBurstVFXMultiplier: 1
+  embersBurstDelayMinMax: {x: 4, y: 6}
+  embersParticleSize: 1
+  useExtinguishSteam: 1
+  enableMaterialAnimation: 1
+  shaderEmissionColor: {r: 0.94509804, g: 0.4745098, b: 0.043137256, a: 1}
+  shaderBurntColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  shaderToBurntInterpolateSpeed: 0.03
+  shaderEmissionMultiplier: 1
+  achieveMaxBrightness_s: 20
+  shaderColorNoise: 0.05
+  shaderColorNoiseSpeed: 1
+  useMaterialAnimationOnAllRenderers: 1
+  animateMaterialsRenderers: []
+  flameCatchAreaAddition: {x: 0.5, y: 0.5, z: 0.5}
+  setThisOnFireOnStart: 0
+  fireSpread: 0
+  onFireTimer: 0
+  isEffectOnForever: 0
+  burnOutStart_s: 50
+  burnOutLength_s: 50
+  isReignitable: 0
+  deleteAfterBurnout: 0
+  useMeshFire: 0
+  meshFireCount: 10
+  meshFireMeshFilters: []
+  calculateFlammationAreaFromMesh: 0
+  affectedByWind: 1
+  ignitionTime: 0
+  enableFlameVFX: 1
+  flameEnvironmentalSpeed: 1
+  flameLiveliness: 1
+  windForceMultiplier: 1
+  flameLivelinessSpeed: 1
+  flameParticleSize: 1
+  flameBurstDelayMinMax: {x: 0, y: 0}
+  flameAreaNoiseMinMaxMultiplier: {x: 0.9, y: 1.1}
+  flameVFXMultiplier: 1
+  onFire: 0
+  flammableColliders: []
+  flammableMaterialIndexes: 
+  useFireSFX: 1
+  customFireSFX: {fileID: 0}
+  customFireOriginOnStart: {fileID: 0}
+  flameLights: []
+  fullExtinguishToughness: 0.7
+  backSpreadCoolDown_s: 5
+  spreadLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  openTabUpper: 0
+  openTabLower: 4
 --- !u!4 &1706346856 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 462753058129977832, guid: f7ca38531f86b2349aa5fd82d565c58d,
@@ -48586,7 +49026,7 @@ MonoBehaviour:
   flameParticleSize: 1
   flameBurstDelayMinMax: {x: 0, y: 0}
   flameAreaNoiseMinMaxMultiplier: {x: 0.4, y: 0.9}
-  flameVFXMultiplier: 2.3
+  flameVFXMultiplier: 1
   onFire: 0
   flammableColliders: []
   flammableMaterialIndexes: 
@@ -48676,7 +49116,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8560594935508107483, guid: 10214edd02bf73d4aae8badfd60cf0ba,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1860164773}
+      addedObject: {fileID: 1860164770}
   m_SourcePrefab: {fileID: 100100000, guid: 10214edd02bf73d4aae8badfd60cf0ba, type: 3}
 --- !u!4 &1860164769 stripped
 Transform:
@@ -48684,7 +49124,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1860164768}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1860164773
+--- !u!114 &1860164770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48697,17 +49137,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpread: 10000
-  fireCrawlSpeed: 0.7
+  fireCrawlSpeed: 1
   overrideFireVFX: 0
   overrideVFXVariant: 3
   fireColor: {r: 1, g: 0, b: 0, a: 1}
   colorIntensityMultiplier: 3
   fireColorBlend: 0.1
-  flameLength: 2
+  flameLength: 1
   smokeColor: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 1}
   smokeColorIntensity: 10
   smokeAlpha: 0.7
-  smokeVFXMultiplier: 6.8
+  smokeVFXMultiplier: 0.5
   smokeParticleSize: 1
   embersVFXMultiplier: 1
   embersBurstVFXMultiplier: 1
@@ -48730,13 +49170,13 @@ MonoBehaviour:
   onFireTimer: 0
   isEffectOnForever: 0
   burnOutStart_s: 30
-  burnOutLength_s: 10
+  burnOutLength_s: 100
   isReignitable: 0
   deleteAfterBurnout: 0
   useMeshFire: 0
   meshFireCount: 10
   meshFireMeshFilters: []
-  calculateFlammationAreaFromMesh: 0
+  calculateFlammationAreaFromMesh: 2
   affectedByWind: 1
   ignitionTime: 0
   enableFlameVFX: 1
@@ -48746,7 +49186,7 @@ MonoBehaviour:
   flameLivelinessSpeed: 1
   flameParticleSize: 1
   flameBurstDelayMinMax: {x: 0, y: 0}
-  flameAreaNoiseMinMaxMultiplier: {x: 0.9, y: 1.1}
+  flameAreaNoiseMinMaxMultiplier: {x: 0.4, y: 0.9}
   flameVFXMultiplier: 1
   onFire: 0
   flammableColliders: []
@@ -48760,7 +49200,7 @@ MonoBehaviour:
   spreadLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  openTabUpper: 2
+  openTabUpper: 0
   openTabLower: 4
 --- !u!1001 &1861727369
 PrefabInstance:
