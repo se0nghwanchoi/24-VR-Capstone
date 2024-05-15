@@ -14,7 +14,7 @@ public class PhoneAct : MonoBehaviour
     //private string url = "http://211.250.192.52:8080/Capstone24/UnitActs.php";
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) // 예를 들어, Esc 키를 누르면 종료
+        if (Input.GetKeyDown(KeyCode.Alpha1)) // 예를 들어, 숫자1 키를 누르면 종료
         {
             StartCoroutine(TowelInteracts(totalInteractionTime, Used));
         }

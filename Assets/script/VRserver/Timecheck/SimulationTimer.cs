@@ -18,7 +18,7 @@ public class SimulationTimer : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape)) // 예를 들어, Esc 키를 누르면 종료
+        if (Input.GetKeyDown(KeyCode.Alpha1)) // 예를 들어, 숫자1 키를 누르면 종료
         {
             EndSimulation();
         }
