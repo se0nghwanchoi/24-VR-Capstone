@@ -663,6 +663,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
+    Android: OAVA_IGNIS
     Standalone: OAVA_IGNIS
   additionalCompilerArguments: {}
   platformArchitecture: {}
