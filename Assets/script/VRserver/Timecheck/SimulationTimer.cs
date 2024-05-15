@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -61,9 +62,10 @@ public class SimulationTimer : MonoBehaviour
     private IEnumerator PostClearTime(float Sim_clear)
     {
         int recordID = PlayerPrefs.GetInt("RecordID");
+        string formattedTime = FormatTime(Sim_clear);
         WWWForm form = new WWWForm();
         form.AddField("recordID", recordID);
-        form.AddField("time", Sim_clear.ToString());
+        form.AddField("time", formattedTime);
 
         using (UnityWebRequest www = UnityWebRequest.Post(url, form))
         {
@@ -78,5 +80,10 @@ public class SimulationTimer : MonoBehaviour
                 Debug.Log("Clear time sent successfully: " + Sim_clear);
             }
         }
+    }
+    private string FormatTime(float timeInSeconds)
+    {
+        TimeSpan timeSpan = TimeSpan.FromSeconds(timeInSeconds);
+        return timeSpan.ToString("hh\\:mm\\:ss");
     }
 }
