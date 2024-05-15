@@ -6,6 +6,6 @@ public class Changetofire : MonoBehaviour
 {
     public void ChangefiresceneBtn()
     {
-        SceneManager.LoadScene("LastFire");
+        SceneManager.LoadScene("FireScene 1");
     }
 }

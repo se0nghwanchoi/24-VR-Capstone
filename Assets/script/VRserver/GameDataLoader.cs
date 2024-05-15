@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using System.Data;
 using UnityEditor.PackageManager.Requests;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class GameDataLoader : MonoBehaviour
     public string apiUrl = "http://localhost/Capstone24/ApiLoad.php";
     //public string apiUrl = "http://211.250.192.52:8080/Capstone24/ApiLoad.php";
     public TMP_Text RecordText;
+    public int count = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -67,28 +69,76 @@ public class GameDataLoader : MonoBehaviour
             //string baseinfo = $"Record ID: {record.recordID}, User ID: {record.ID}, Disaster ID: {record.disaster_id}, Time: {record.time}\n";
             RecordText.text += baseinfo;
 
+            TimeSpan totaltimeSpan = TimeSpan.Parse(record.time);
+            int totalSeconds = (int)totaltimeSpan.TotalSeconds;
+
+            if (totalSeconds > 180)
+                count -= 10;
 
             foreach (var doCode in record.DoCodes)
             {
                 string doCodeInfo = null;
 
                 if (doCode.Do_code == 1)
+                {
                     doCodeInfo = $"아이템: 수건              상호작용 시간: {doCode.interact_time}\n";
+
+                    TimeSpan toweltimeSpan = TimeSpan.Parse(doCode.interact_time);
+                    int towelSecond = (int)toweltimeSpan.TotalSeconds;
+
+                    if (towelSecond >= (totalSeconds / 2))
+                        count++;
+                }
+
                 else if (doCode.Do_code == 2)
-                    doCodeInfo = $"아이템: 핸드폰          상호작용 시간: {doCode.interact_time}\n";
+                {
+                    if (doCode.use_status == 1)
+                    {
+                        doCodeInfo = $"아이템: 핸드폰          핸드폰 신고: O\n";
+                        count += 2;
+                    }
+                    else
+                        doCodeInfo = $"아이템: 핸드폰          핸드폰 신고: X\n";
+                }
+
                 else if (doCode.Do_code == 3)
+                {
                     doCodeInfo = $"아이템: 소화기          상호작용 시간: {doCode.interact_time}\n";
+
+                    TimeSpan firetimeSpan = TimeSpan.Parse(doCode.interact_time);
+                    int fireSecond = (int)firetimeSpan.TotalSeconds;
+
+                    if (fireSecond <= 15 && fireSecond > 0)
+                        count++;
+                }
+
                 else if (doCode.Do_code == 4)
                 {
                     if (doCode.use_status == 1)
+                    {
                         doCodeInfo = $"아이템: 비상벨          비상벨 작동 여부: O\n";
-                    else doCodeInfo = $"아이템: 비상벨          비상벨 작동 여부: X\n";
+                        count++;
+                    }
+                    else
+                        doCodeInfo = $"아이템: 비상벨          비상벨 작동 여부: X\n";
                 }
 
 
                 //string doCodeInfo = $"Do_code: {doCode.Do_code}, Interact_time: {doCode.interact_time}, Use Status: {doCode.use_status}\n";
                 RecordText.text += doCodeInfo;
+
             }
+            RecordText.text += count;
+            if (count == 5)
+                RecordText.text += "A";
+            else if (count == 4)
+                RecordText.text += "B";
+            else if (count == 3)
+                RecordText.text += "C";
+            else if (count == 2)
+                RecordText.text += "D";
+            else
+                RecordText.text += "F";
         }
     }
 }
