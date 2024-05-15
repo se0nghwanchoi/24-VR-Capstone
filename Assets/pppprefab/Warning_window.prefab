@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6e4af5beb63b53f4fa44e9ed5ac808f7, type: 2}
+  - {fileID: 2100000, guid: 1ad0289732ca9994d8176264afd4b902, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 5417628037687539140}
   - component: {fileID: 1369136130803612584}
   - component: {fileID: 9194780352392364139}
+  - component: {fileID: 8345574684244289932}
   m_Layer: 5
   m_Name: Warning_window
   m_TagString: Untagged
@@ -221,7 +222,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   warningText: {fileID: 5672602244083702580}
-  displayTime: 15
+  displayTime: 100000
+--- !u!114 &8345574684244289932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2776346815904790726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551e66bfbeee3aa498fea7c7a002b9e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apiUrl: http://localhost/Capstone24/ApiLoad.php
+  RecordText: {fileID: 5672602244083702580}
+  count: 0
 --- !u!1 &3327274873402552306
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +264,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3327274873402552306}
   m_LocalRotation: {x: -0.004807067, y: 0.999979, z: -0.0013198601, w: 0.0041389717}
-  m_LocalPosition: {x: 0, y: 0, z: 0.36}
+  m_LocalPosition: {x: 0, y: 0, z: 0.2798}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -257,8 +273,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0.149, y: 179.525, z: -0.551}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.01, y: -0.03}
-  m_SizeDelta: {x: 1.5, y: 0.8}
+  m_AnchoredPosition: {x: -0.9823, y: -0.26}
+  m_SizeDelta: {x: 1.4449, y: 0.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4125576041602144040
 CanvasRenderer:
@@ -288,14 +304,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "                    \uD654\uC7AC \uC0C1\uD669 \uC2DC\uBBAC\uB808\uC774\uD130
-    \uC785\uB2C8\uB2E4.    \r\n\r\n     1. \uD654\uC7AC \uBC1C\uC0DD\uC744 \uC778\uC9C0\uD55C
-    \uC0C1\uD0DC\uC785\uB2C8\uB2E4.\r\n\r\n     2. \uC548\uB0B4 \uBC29\uC1A1\uC744
-    \uC798 \uB4E3\uACE0 \uD654\uC0B4\uD45C\uAC00 \uBCF4\uC774\uB294 \uCABD\uC73C\uB85C
-    \uC774\uB3D9\uD574 \uC8FC\uC138\uC694.\r\n\r\n    3. \uCC98\uC74C \uC548\uB0B4\uB294
-    \uD578\uB4DC\uD3F0\uC73C\uB85C 119\uC758 \uC2E0\uACE0 \uD558\uB294 \uB2E8\uACC4\uC785\uB2C8\uB2E4.
-    \r\n         \uD578\uB4DC\uD3F0\uC744 \uC9D1\uC73C\uBA74 \uBC14\uB85C \uC2E0\uACE0\uCC98\uB9AC\uAC00
-    \uB429\uB2C8\uB2E4. \r\n     "
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55828b3a3a0f2db4ebb31094d9a0eabd, type: 2}
   m_sharedMaterial: {fileID: 6442030179980315513, guid: 55828b3a3a0f2db4ebb31094d9a0eabd,
@@ -323,8 +332,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.08
-  m_fontSizeBase: 0.08
+  m_fontSize: 0.07
+  m_fontSizeBase: 0.07
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -359,7 +368,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -1.1797485, y: 0, z: -1.1562023, w: 0}
+  m_margin: {x: -0.6606822, y: 0, z: 0.90463686, w: 0.08160171}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
