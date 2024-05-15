@@ -9,8 +9,8 @@ public class SimulationTimer : MonoBehaviour
 {
     private float SimStart;
     private bool Run;
-    private string url = "http://localhost/Capstone24/TimeCheck.php";
-    //private string url = "http://211.250.192.52:8080/Capstone24/TimeCheck.php";
+    //private string url = "http://localhost/Capstone24/TimeCheck.php";
+    private string url = "http://211.250.192.52:8080/Capstone24/TimeCheck.php";
     public void Start()
     {
         StartSimulation();

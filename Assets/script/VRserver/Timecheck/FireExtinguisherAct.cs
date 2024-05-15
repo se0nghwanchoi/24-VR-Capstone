@@ -10,8 +10,8 @@ public class FireExtinguisherAct : MonoBehaviour
     private XRGrabInteractable grabInteractable;
     private float totalInteractionTime = 0;
     private bool Used = false;
-    private string url = "http://localhost/Capstone24/UnitActs.php";
-    //private string url = "http://211.250.192.52:8080/Capstone24/UnitActs.php";
+    //private string url = "http://localhost/Capstone24/UnitActs.php";
+    private string url = "http://211.250.192.52:8080/Capstone24/UnitActs.php";
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) // 예를 들어, Esc 키를 누르면 종료
@@ -64,7 +64,7 @@ public class FireExtinguisherAct : MonoBehaviour
         form.AddField("interactionTime", interactionTime.ToString());
         form.AddField("useStatus", usedStatus ? "1" : "0");
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/Capstone24/UnitActs.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post(url, form))
         {
             yield return www.SendWebRequest();
 

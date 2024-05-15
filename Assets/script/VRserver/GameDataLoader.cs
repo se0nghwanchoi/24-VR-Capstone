@@ -8,8 +8,8 @@ using TMPro;
 
 public class GameDataLoader : MonoBehaviour
 {
-    public string apiUrl = "http://localhost/Capstone24/ApiLoad.php";
-    //public string apiUrl = "http://211.250.192.52:8080/Capstone24/ApiLoad.php";
+    //public string apiUrl = "http://localhost/Capstone24/ApiLoad.php";
+    public string apiUrl = "http://211.250.192.52:8080/Capstone24/ApiLoad.php";
     public TMP_Text RecordText;
 
     // Start is called before the first frame update
