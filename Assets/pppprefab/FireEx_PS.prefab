@@ -51,7 +51,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -4942,8 +4942,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433614c4cd7e4ce44b13e031a1cef19b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleExtinquishRadius: 1
-  incrementalPower: 0.0005
+  particleExtinquishRadius: 0.3
+  incrementalPower: 0.0001
 --- !u!1 &1215077094847765793
 GameObject:
   m_ObjectHideFlags: 0
