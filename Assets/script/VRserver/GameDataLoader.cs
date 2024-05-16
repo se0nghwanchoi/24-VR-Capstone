@@ -131,15 +131,15 @@ public class GameDataLoader : MonoBehaviour
 
             RecordText.text += "\n\n";
             if (count == 5)
-                RecordText.text += "                                               A";
+                RecordText.text += "                                          위기 상황 대응능력: A ";
             else if (count == 4)
-                RecordText.text += "                                               B";
+                RecordText.text += "                                          위기 상황 대응능력: B ";
             else if (count == 3)
-                RecordText.text += "                                               C";
+                RecordText.text += "                                          위기 상황 대응능력: C ";
             else if (count == 2)
-                RecordText.text += "                                               D";
+                RecordText.text += "                                          위기 상황 대응능력: D ";
             else
-                RecordText.text += "                                               F";
+                RecordText.text += "                                          위기 상황 대응능력: E ";
         }
     }
 }
