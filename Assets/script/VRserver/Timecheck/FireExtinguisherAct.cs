@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -58,10 +59,11 @@ public class FireExtinguisherAct : MonoBehaviour
     private IEnumerator TowelInteracts(float interactionTime, bool usedStatus)
     {
         int recordID = PlayerPrefs.GetInt("RecordID");
+        string formattedTime = FormatTime(interactionTime);
         WWWForm form = new WWWForm();
         form.AddField("recordID", recordID);
         form.AddField("doCode", 3);
-        form.AddField("interactionTime", interactionTime.ToString());
+        form.AddField("interactionTime", formattedTime);
         form.AddField("useStatus", usedStatus ? "1" : "0");
 
         using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/Capstone24/UnitActs.php", form))
@@ -77,5 +79,10 @@ public class FireExtinguisherAct : MonoBehaviour
                 Debug.Log("Interaction time sent successfully");
             }
         }
+    }
+    private string FormatTime(float timeInSeconds)
+    {
+        TimeSpan timeSpan = TimeSpan.FromSeconds(timeInSeconds);
+        return timeSpan.ToString("hh\\:mm\\:ss\\.ffffff");
     }
 }
