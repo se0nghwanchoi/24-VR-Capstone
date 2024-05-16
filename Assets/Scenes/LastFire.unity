@@ -13046,6 +13046,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 541475222}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &542803711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 542803712}
+  m_Layer: 0
+  m_Name: attach Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &542803712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542803711}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0.147, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1248466495}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &549265276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32185,6 +32216,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5209105766922556809, guid: e6264cff82abb294fb721d84c3128fd4,
+        type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5209105766922556809, guid: e6264cff82abb294fb721d84c3128fd4,
+        type: 3}
+      propertyPath: m_UseDynamicAttach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5209105766922556809, guid: e6264cff82abb294fb721d84c3128fd4,
+        type: 3}
+      propertyPath: m_MatchAttachRotation
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8453179540461878737, guid: e6264cff82abb294fb721d84c3128fd4,
         type: 3}
       propertyPath: m_Name
@@ -32192,7 +32238,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3254177377659943870, guid: e6264cff82abb294fb721d84c3128fd4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 542803712}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8453179540461878737, guid: e6264cff82abb294fb721d84c3128fd4,
         type: 3}
@@ -32203,6 +32253,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 866511334}
   m_SourcePrefab: {fileID: 100100000, guid: e6264cff82abb294fb721d84c3128fd4, type: 3}
+--- !u!4 &1248466495 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3254177377659943870, guid: e6264cff82abb294fb721d84c3128fd4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1248466494}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1251334922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 873186533270936570, guid: fccc93b795fddda41a7703500af84464,
@@ -45694,7 +45750,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -48216,6 +48272,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: phone1k
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744017069202389468, guid: 9c993bdd1f0fb3e4da5b61dabec5fbb3,
+        type: 3}
+      propertyPath: m_UseDynamicAttach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744017069202389468, guid: 9c993bdd1f0fb3e4da5b61dabec5fbb3,
+        type: 3}
+      propertyPath: m_MatchAttachRotation
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
