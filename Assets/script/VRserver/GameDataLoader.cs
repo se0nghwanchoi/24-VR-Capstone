@@ -129,16 +129,17 @@ public class GameDataLoader : MonoBehaviour
 
             }
 
+            RecordText.text += "\n\n";
             if (count == 5)
-                RecordText.text += "A";
+                RecordText.text += "                                               A";
             else if (count == 4)
-                RecordText.text += "B";
+                RecordText.text += "                                               B";
             else if (count == 3)
-                RecordText.text += "C";
+                RecordText.text += "                                               C";
             else if (count == 2)
-                RecordText.text += "D";
+                RecordText.text += "                                               D";
             else
-                RecordText.text += "F";
+                RecordText.text += "                                               F";
         }
     }
 }
