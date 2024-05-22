@@ -65,7 +65,7 @@ public class GameDataLoader : MonoBehaviour
     {
         foreach (GameData record in records)
         {
-            string baseinfo = $"학번: {record.ID},                     총 플레이 시간: {record.time}\n";
+            string baseinfo = $"학번: {record.ID}                 총 플레이 시간: {record.time}\n";
             //string baseinfo = $"Record ID: {record.recordID}, User ID: {record.ID}, Disaster ID: {record.disaster_id}, Time: {record.time}\n";
             RecordText.text += baseinfo;
 
