@@ -12,7 +12,26 @@ public class p : XRGrabInteractable
     public GameObject screen1; // 초기 배경화면
     public GameObject screen2; // 전화 거는 화면
     public GameObject screen3; // 신고 완료 화면
+    public Transform leftHandAttachPoint;
+    public Transform rightHandAttachPoint;
 
+    protected override void OnSelectEntered(XRBaseInteractor interactor)
+    {
+        base.OnSelectEntered(interactor);
+
+        // Grabbed by left hand
+        if (interactor is XRDirectInteractor directInteractor && directInteractor.selectTarget == this && directInteractor.CompareTag("LeftHand"))
+        {
+            if (leftHandAttachPoint != null)
+                attachTransform = leftHandAttachPoint;
+        }
+        // Grabbed by right hand
+        else if (interactor is XRDirectInteractor directInteractor2 && directInteractor2.selectTarget == this && directInteractor2.CompareTag("RightHand"))
+        {
+            if (rightHandAttachPoint != null)
+                attachTransform = rightHandAttachPoint;
+        }
+    }
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         base.OnSelectEntered(args);
