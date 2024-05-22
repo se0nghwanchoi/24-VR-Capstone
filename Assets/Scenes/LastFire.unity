@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16969995, g: 0.21319982, b: 0.27347448, a: 1}
+  m_IndirectSpecularColor: {r: 0.170033, g: 0.21353868, b: 0.27390614, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -828,10 +828,35 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7400367927272810397, guid: 59d9fe185331f264cb38c7050792d1dd,
+        type: 3}
+      propertyPath: m_SelectMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400367927272810397, guid: 59d9fe185331f264cb38c7050792d1dd,
+        type: 3}
+      propertyPath: m_UseDynamicAttach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400367927272810397, guid: 59d9fe185331f264cb38c7050792d1dd,
+        type: 3}
+      propertyPath: m_SecondaryAttachTransform
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8013437529493503456, guid: 59d9fe185331f264cb38c7050792d1dd,
         type: 3}
       propertyPath: m_Name
       value: fire extinguisher
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735721424115128617, guid: 59d9fe185331f264cb38c7050792d1dd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735721424115128617, guid: 59d9fe185331f264cb38c7050792d1dd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.33
       objectReference: {fileID: 0}
     - target: {fileID: 8760165571685866493, guid: 59d9fe185331f264cb38c7050792d1dd,
         type: 3}
@@ -5428,13 +5453,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1777914747169157959, guid: 1e0b3c233c1151f42a559777b197fa1c,
         type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1.4969
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777914747169157959, guid: 1e0b3c233c1151f42a559777b197fa1c,
+        type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.28
+      value: 0.2793
       objectReference: {fileID: 0}
     - target: {fileID: 1777914747169157959, guid: 1e0b3c233c1151f42a559777b197fa1c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.03
+      value: -1.0561
       objectReference: {fileID: 0}
     - target: {fileID: 1777914747169157959, guid: 1e0b3c233c1151f42a559777b197fa1c,
         type: 3}
@@ -5454,7 +5484,12 @@ PrefabInstance:
     - target: {fileID: 5672602244083702580, guid: 1e0b3c233c1151f42a559777b197fa1c,
         type: 3}
       propertyPath: m_fontSize
-      value: 0.05
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5672602244083702580, guid: 1e0b3c233c1151f42a559777b197fa1c,
+        type: 3}
+      propertyPath: m_margin.w
+      value: -0.013876677
       objectReference: {fileID: 0}
     - target: {fileID: 5672602244083702580, guid: 1e0b3c233c1151f42a559777b197fa1c,
         type: 3}
@@ -5464,7 +5499,7 @@ PrefabInstance:
     - target: {fileID: 5672602244083702580, guid: 1e0b3c233c1151f42a559777b197fa1c,
         type: 3}
       propertyPath: m_margin.y
-      value: -0.052972406
+      value: 0.07219654
       objectReference: {fileID: 0}
     - target: {fileID: 5672602244083702580, guid: 1e0b3c233c1151f42a559777b197fa1c,
         type: 3}
@@ -5474,7 +5509,7 @@ PrefabInstance:
     - target: {fileID: 5672602244083702580, guid: 1e0b3c233c1151f42a559777b197fa1c,
         type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.05
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 9194780352392364139, guid: 1e0b3c233c1151f42a559777b197fa1c,
         type: 3}
