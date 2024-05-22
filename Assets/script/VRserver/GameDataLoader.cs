@@ -65,7 +65,7 @@ public class GameDataLoader : MonoBehaviour
     {
         foreach (GameData record in records)
         {
-            string baseinfo = $"학번: {record.ID},                     총 플레이 시간: {record.time}\n";
+            string baseinfo = $"학번: {record.ID}                 총 플레이 시간: {record.time}\n";
             //string baseinfo = $"Record ID: {record.recordID}, User ID: {record.ID}, Disaster ID: {record.disaster_id}, Time: {record.time}\n";
             RecordText.text += baseinfo;
 
@@ -131,15 +131,15 @@ public class GameDataLoader : MonoBehaviour
 
             RecordText.text += "\n\n";
             if (count == 5)
-                RecordText.text += "                                          위기 상황 대응능력: A ";
+                RecordText.text += "                       위기 상황 대응능력: A ";
             else if (count == 4)
-                RecordText.text += "                                          위기 상황 대응능력: B ";
+                RecordText.text += "                       위기 상황 대응능력: B ";
             else if (count == 3)
-                RecordText.text += "                                          위기 상황 대응능력: C ";
+                RecordText.text += "                       위기 상황 대응능력: C ";
             else if (count == 2)
-                RecordText.text += "                                          위기 상황 대응능력: D ";
+                RecordText.text += "                       위기 상황 대응능력: D ";
             else
-                RecordText.text += "                                          위기 상황 대응능력: E ";
+                RecordText.text += "                       위기 상황 대응능력: E ";
         }
     }
 }

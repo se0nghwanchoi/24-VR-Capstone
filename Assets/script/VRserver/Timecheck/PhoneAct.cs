@@ -83,6 +83,6 @@ public class PhoneAct : MonoBehaviour
     private string FormatTime(float timeInSeconds)
     {
         TimeSpan timeSpan = TimeSpan.FromSeconds(timeInSeconds);
-        return timeSpan.ToString("hh\\:mm\\:ss\\.ffffff");
+        return timeSpan.ToString("hh\\:mm\\:ss");
     }
 }
