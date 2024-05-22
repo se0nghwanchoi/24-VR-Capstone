@@ -49166,7 +49166,7 @@ MonoBehaviour:
   fireSpread: 0
   onFireTimer: 0
   isEffectOnForever: 0
-  burnOutStart_s: 100
+  burnOutStart_s: 30
   burnOutLength_s: 100
   isReignitable: 0
   deleteAfterBurnout: 0
@@ -49197,8 +49197,8 @@ MonoBehaviour:
   spreadLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  openTabUpper: 4
-  openTabLower: 0
+  openTabUpper: 0
+  openTabLower: 4
 --- !u!1001 &1860164768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56983,7 +56983,7 @@ MonoBehaviour:
   spreadLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  openTabUpper: 0
+  openTabUpper: 1
   openTabLower: 4
 --- !u!1001 &2103729721
 PrefabInstance:
