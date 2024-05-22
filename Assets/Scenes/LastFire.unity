@@ -52260,6 +52260,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2003316125487328323, guid: b56e90d55372f56419f6f935201b92d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2273501209263438879, guid: b56e90d55372f56419f6f935201b92d3,
         type: 3}
       propertyPath: m_Name
@@ -52325,6 +52330,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4297656899245795364, guid: b56e90d55372f56419f6f935201b92d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297656900646643931, guid: b56e90d55372f56419f6f935201b92d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6142441790013039505, guid: b56e90d55372f56419f6f935201b92d3,
         type: 3}
       propertyPath: m_IsActive
@@ -52334,6 +52349,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7629298110487371190, guid: b56e90d55372f56419f6f935201b92d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: LeftHand
       objectReference: {fileID: 0}
     - target: {fileID: 7991870634137073902, guid: b56e90d55372f56419f6f935201b92d3,
         type: 3}

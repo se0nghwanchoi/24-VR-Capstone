@@ -15,26 +15,10 @@ public class p : XRGrabInteractable
     public Transform leftHandAttachPoint;
     public Transform rightHandAttachPoint;
 
-    protected override void OnSelectEntered(XRBaseInteractor interactor)
-    {
-        base.OnSelectEntered(interactor);
-
-        // Grabbed by left hand
-        if (interactor is XRDirectInteractor directInteractor && directInteractor.selectTarget == this && directInteractor.CompareTag("LeftHand"))
-        {
-            if (leftHandAttachPoint != null)
-                attachTransform = leftHandAttachPoint;
-        }
-        // Grabbed by right hand
-        else if (interactor is XRDirectInteractor directInteractor2 && directInteractor2.selectTarget == this && directInteractor2.CompareTag("RightHand"))
-        {
-            if (rightHandAttachPoint != null)
-                attachTransform = rightHandAttachPoint;
-        }
-    }
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         base.OnSelectEntered(args);
+        SetAttachPoint(args); // attach point 설정
         StartCall();
     }
 
@@ -76,5 +60,24 @@ public class p : XRGrabInteractable
 
         // 오디오 정지
         audioSource.Stop();
+        attachTransform = null; // attach point 초기화
+    }
+
+    void SetAttachPoint(SelectEnterEventArgs args)
+    {
+        // 현재 상호작용 중인 컨트롤러를 확인하여 attach point 설정
+        if (args.interactorObject is XRDirectInteractor interactor)
+        {
+            if (interactor.CompareTag("LeftHand"))
+            {
+                attachTransform = leftHandAttachPoint;
+                Debug.Log("왼손");
+            }
+            else if (interactor.CompareTag("RightHand"))
+            {
+                attachTransform = rightHandAttachPoint;
+                Debug.Log("오른손");
+            }
+        }
     }
 }
