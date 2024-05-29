@@ -43484,7 +43484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469e00e876fb40142af620db2b198643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  simpleInteractable: {fileID: 2017260883}
+  simpleInteractable: {fileID: 1549062641}
   Closetopenandclose: {fileID: 2017260878}
   open: 0
 --- !u!65 &1549062638
