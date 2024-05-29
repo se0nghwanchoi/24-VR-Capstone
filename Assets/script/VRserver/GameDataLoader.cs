@@ -72,6 +72,7 @@ public class GameDataLoader : MonoBehaviour
 
             TimeSpan totaltimeSpan = TimeSpan.Parse(record.time);
             int totalSeconds = (int)totaltimeSpan.TotalSeconds;
+            int toxicGas = 0;
 
             if (totalSeconds > 180)
                 count -= 10;
@@ -90,8 +91,7 @@ public class GameDataLoader : MonoBehaviour
                     if (towelSecond >= (totalSeconds / 2))
                         count++;
 
-                    int toxicGas = totalSeconds - towelSecond;
-                    doCodeInfo += $"유독가스 노출 시간: {toxicGas}\n";
+                    toxicGas = totalSeconds - towelSecond;
                 }
 
                 else if (doCode.Do_code == 2)
@@ -129,7 +129,9 @@ public class GameDataLoader : MonoBehaviour
 
                 //string doCodeInfo = $"Do_code: {doCode.Do_code}, Interact_time: {doCode.interact_time}, Use Status: {doCode.use_status}\n";
                 RecordText.text += doCodeInfo;
+
             }
+            RecordText.text += $"유독가스 노출 시간: {toxicGas}초\n";
 
             RecordText.text += "\n\n";
             if (count == 5)
