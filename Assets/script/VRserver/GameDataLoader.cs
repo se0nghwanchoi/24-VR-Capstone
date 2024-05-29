@@ -63,6 +63,7 @@ public class GameDataLoader : MonoBehaviour
 
     void DisplayData(GameData[] records)
     {
+
         foreach (GameData record in records)
         {
             string baseinfo = $"학번: {record.ID}                 총 플레이 시간: {record.time}\n";
@@ -88,6 +89,9 @@ public class GameDataLoader : MonoBehaviour
 
                     if (towelSecond >= (totalSeconds / 2))
                         count++;
+
+                    int toxicGas = totalSeconds - towelSecond;
+                    doCodeInfo += $"유독가스 노출 시간: {toxicGas}\n";
                 }
 
                 else if (doCode.Do_code == 2)
@@ -123,10 +127,8 @@ public class GameDataLoader : MonoBehaviour
                         doCodeInfo = $"아이템: 비상벨          비상벨 작동 여부: X\n";
                 }
 
-
                 //string doCodeInfo = $"Do_code: {doCode.Do_code}, Interact_time: {doCode.interact_time}, Use Status: {doCode.use_status}\n";
                 RecordText.text += doCodeInfo;
-
             }
 
             RecordText.text += "\n\n";
