@@ -17,6 +17,9 @@ public class TowelAct : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) // 예를 들어, 숫자1 키를 누르면 종료
         {
+            interactionTimer.EndInteraction();
+            totalInteractionTime = interactionTimer.GetTotalInteractionTime();
+            Debug.Log($"Total Interaction Time with Towel: {totalInteractionTime}");
             StartCoroutine(TowelInteracts(totalInteractionTime, Used));
         }
     }
