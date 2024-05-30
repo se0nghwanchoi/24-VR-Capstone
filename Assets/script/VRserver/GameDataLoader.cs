@@ -130,11 +130,11 @@ public class GameDataLoader : MonoBehaviour
                 {
                     if(doCode.use_status == 1)
                     {
-                        doCodeInfo = $"아이템: 화재밸브          화재밸브 작동 여부: O\n";
+                        doCodeInfo = $"아이템: 화재밸브       화재밸브 작동 여부: O\n";
                         count++;
                     }
                     else
-                        doCodeInfo = $"아이템: 화재밸브          화재밸브 작동 여부: X\n";
+                        doCodeInfo = $"아이템: 화재밸브       화재밸브 작동 여부: X\n";
                 }
                 //string doCodeInfo = $"Do_code: {doCode.Do_code}, Interact_time: {doCode.interact_time}, Use Status: {doCode.use_status}\n";
                 RecordText.text += doCodeInfo;
@@ -143,13 +143,13 @@ public class GameDataLoader : MonoBehaviour
             RecordText.text += $"유독가스 노출 시간: {toxicGas}초\n";
 
             RecordText.text += "\n\n";
-            if (count == 5)
+            if (count == 6)
                 RecordText.text += "                       위기 상황 대응능력: A ";
-            else if (count == 4)
+            else if (count == 5)
                 RecordText.text += "                       위기 상황 대응능력: B ";
-            else if (count == 3)
+            else if (count == 4)
                 RecordText.text += "                       위기 상황 대응능력: C ";
-            else if (count == 2)
+            else if (count == 3)
                 RecordText.text += "                       위기 상황 대응능력: D ";
             else
                 RecordText.text += "                       위기 상황 대응능력: E ";
