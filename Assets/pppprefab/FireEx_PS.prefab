@@ -4943,7 +4943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particleExtinquishRadius: 0.3
-  incrementalPower: 0.0001
+  incrementalPower: 0.001
 --- !u!1 &1215077094847765793
 GameObject:
   m_ObjectHideFlags: 0

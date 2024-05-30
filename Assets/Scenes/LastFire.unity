@@ -17405,7 +17405,7 @@ MonoBehaviour:
   spreadLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  openTabUpper: 1
+  openTabUpper: 0
   openTabLower: 4
 --- !u!1001 &655582319
 PrefabInstance:
@@ -21624,7 +21624,7 @@ MonoBehaviour:
   spreadLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  openTabUpper: 1
+  openTabUpper: 0
   openTabLower: 4
 --- !u!1 &810513220
 GameObject:
@@ -23542,7 +23542,7 @@ MonoBehaviour:
   spreadLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  openTabUpper: 1
+  openTabUpper: 0
   openTabLower: 4
 --- !u!4 &870551556 stripped
 Transform:
@@ -24940,7 +24940,7 @@ MonoBehaviour:
   spreadLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  openTabUpper: 1
+  openTabUpper: 0
   openTabLower: 4
 --- !u!1 &937070084 stripped
 GameObject:
@@ -42599,7 +42599,7 @@ MonoBehaviour:
   spreadLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  openTabUpper: 1
+  openTabUpper: 0
   openTabLower: 4
 --- !u!1001 &1630014347
 PrefabInstance:
@@ -48384,7 +48384,7 @@ MonoBehaviour:
   spreadLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  openTabUpper: 1
+  openTabUpper: 0
   openTabLower: 4
 --- !u!1001 &1860164768
 PrefabInstance:
@@ -48482,7 +48482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpread: 10000
-  fireCrawlSpeed: 1
+  fireCrawlSpeed: 0.7
   overrideFireVFX: 0
   overrideVFXVariant: 3
   fireColor: {r: 0.7490196, g: 0.44313726, b: 0, a: 1}
@@ -48545,7 +48545,7 @@ MonoBehaviour:
   spreadLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  openTabUpper: 1
+  openTabUpper: 0
   openTabLower: 4
 --- !u!1001 &1861727369
 PrefabInstance:
