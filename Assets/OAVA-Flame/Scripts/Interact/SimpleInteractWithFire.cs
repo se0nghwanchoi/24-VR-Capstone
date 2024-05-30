@@ -9,10 +9,23 @@ namespace Ignis
     /// </summary>
     public class SimpleInteractWithFire : MonoBehaviour, IInteractWithFire
     {
+        public GameObject ExplosionP;
+        public Transform createPoint;
+        private bool hasInteracted = false;
+
         public void OnCollisionWithFire(GameObject burningObject)
         {
-            Debug.Log("Object: " + gameObject.name + " Interacted with fire object: " + burningObject.name + " Which had a tag: " + burningObject.tag);
+            if (!hasInteracted)
+            {
+                hasInteracted = true;
+                StartCoroutine(ExplodeAfterDelay());
+            }
+        }
+
+        private IEnumerator ExplodeAfterDelay()
+        {
+            yield return new WaitForSeconds(2f); // 2초 지연
+            Instantiate(ExplosionP, createPoint.position, createPoint.rotation);
         }
     }
 }
-
