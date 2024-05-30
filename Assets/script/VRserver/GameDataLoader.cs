@@ -130,11 +130,11 @@ public class GameDataLoader : MonoBehaviour
                 {
                     if(doCode.use_status == 1)
                     {
-                        doCodeInfo = $"아이템: 화재밸브       화재밸브 잠금 여부: O\n";
+                        doCodeInfo = $"아이템: 가스밸브       가스밸브 잠금 여부: O\n";
                         count++;
                     }
                     else
-                        doCodeInfo = $"아이템: 화재밸브       화재밸브 잠금 여부: X\n";
+                        doCodeInfo = $"아이템: 가스밸브       가스밸브 잠금 여부: X\n";
                 }
                 //string doCodeInfo = $"Do_code: {doCode.Do_code}, Interact_time: {doCode.interact_time}, Use Status: {doCode.use_status}\n";
                 RecordText.text += doCodeInfo;
