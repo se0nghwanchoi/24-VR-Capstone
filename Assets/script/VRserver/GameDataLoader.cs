@@ -126,7 +126,16 @@ public class GameDataLoader : MonoBehaviour
                     else
                         doCodeInfo = $"아이템: 비상벨          비상벨 작동 여부: X\n";
                 }
-
+                else if (doCode.Do_code == 5)
+                {
+                    if(doCode.use_status == 1)
+                    {
+                        doCodeInfo = $"아이템: 화재밸브          비상벨 작동 여부: O\n";
+                        count++;
+                    }
+                    else
+                        doCodeInfo = $"아이템: 화재밸브          비상벨 작동 여부: X\n";
+                }
                 //string doCodeInfo = $"Do_code: {doCode.Do_code}, Interact_time: {doCode.interact_time}, Use Status: {doCode.use_status}\n";
                 RecordText.text += doCodeInfo;
 
